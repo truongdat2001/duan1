@@ -1,0 +1,65 @@
+.container-dangky{
+    text-decoration: none;
+    background-color: #F3F3F3;
+    min-height: 750px;
+}
+
+.header-tong-dangky {
+    text-align: center;
+    background-color: var(--tone-chudao);
+}
+
+.header-tong-dangky .header-dangky {
+    align-items: center;
+}
+
+.header-tong-dangky .header-dangky .logo img {
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.container-dangky .form-tong {
+    background-color: #72D6E8;
+    width: 40%;
+    border: 1px solid #72D6E8;
+    border-radius: 20px;
+    margin: 2% 30%;
+}
+
+.container-dangky .form-tong .form {
+    padding: 20px 40px 40px 40px;
+}
+
+.container-dangky .form-tong .form .textdangky{
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+.container-dangky .form-tong .form label{
+    font-size: 20px;
+}
+
+.container-dangky .form-tong .form input{
+    height: 40px;
+    width: 100%;
+    margin: 5px 0;
+    padding: 0 10px;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+}
+
+.container-dangky .form-tong .form .dangky{
+    background-color: #5085EE;
+    color: white;
+    font-size: 20px;
+    margin: 20px 0;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.container-dangky .form-tong .form .dangky:hover{
+    background-color: green;
+}

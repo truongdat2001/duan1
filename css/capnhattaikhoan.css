@@ -1,0 +1,77 @@
+.container-edit-user{
+    text-decoration: none;
+    background-color: #F3F3F3;
+    min-height: 750px;
+}
+
+.header-tong-edit-user {
+    text-align: center;
+    background-color: var(--tone-chudao);
+}
+
+.header-tong-edit-user .header-edit-user {
+    align-items: center;
+}
+
+.header-tong-edit-user .header-edit-user .logo img {
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.container-edit-user .form-tong {
+    background-color: #72D6E8;
+    width: 40%;
+    border: 1px solid #72D6E8;
+    border-radius: 20px;
+    margin: 2% 30%;
+}
+
+.container-edit-user .form-tong .form {
+    padding: 20px 40px 40px 40px;
+}
+
+.container-edit-user .form-tong .form .textcapnhat{
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+.container-edit-user .form-tong .form label{
+    font-size: 20px;
+}
+
+.container-edit-user .form-tong .form input{
+    height: 40px;
+    width: 100%;
+    margin: 5px 0;
+    padding: 0 10px;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+}
+
+.container-edit-user .form-tong .form .capnhat{
+    background-color: #5085EE;
+    color: white;
+    font-size: 20px;
+    margin: 20px 0 0 0;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.container-edit-user .form-tong .form .capnhat:hover{
+    background-color: green;
+}
+
+.container-edit-user .form-tong .form .home{
+    background-color: #ef3330;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.container-edit-user .form-tong .form .home:hover{
+    background-color: green;
+}

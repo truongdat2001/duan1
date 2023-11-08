@@ -1,0 +1,114 @@
+.container-sanpham {
+    margin: 20px 6%;
+}
+
+.container-sanpham .ten-danh-muc h3 {
+    display: block;
+    font-size: 40px;
+    text-align: center;
+    height: 50px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.container-sanpham .sap-xep {
+    display: flex;
+    background-color: white;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.container-sanpham .sap-xep p.xep-theo {
+    font-weight: bold;
+}
+
+.container-sanpham .sap-xep .group-sapxep {
+    display: flex;
+    padding-left: 10px;
+}
+
+.container-sanpham .sap-xep .group-sapxep input[type="radio"] {
+    margin-right: 5px;
+}
+
+.container-sanpham .sanpham {
+    background-color: white;
+}
+
+.container-sanpham .sanpham ul.content-sanpham {
+    margin: 20px 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container-sanpham .sanpham ul.content-sanpham li {
+    flex-basis: 20%;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.container-sanpham .sanpham ul.content-sanpham li img {
+    max-width: 100%;
+    /* height: auto; */
+}
+
+.container-sanpham .sanpham ul.content-sanpham li .box {
+    background-color: white;
+    border: 1px solid rgb(156, 156, 156);
+}
+
+.container-sanpham .sanpham ul.content-sanpham li .box .box-top {
+    position: relative;
+    overflow: hidden;
+}
+
+.container-sanpham .sanpham ul.content-sanpham li:hover .box .box-top img {
+    filter: opacity(90%);
+}
+
+.container-sanpham .sanpham ul.content-sanpham li .box .box-top .box-img img {
+    display: block;
+    height: 200px;
+    width: 100%;
+}
+
+.container-sanpham .sanpham ul.content-sanpham li .themgiohang .buy-now {
+    background-color: var(--tone-chudao);
+    display: block;
+    width: 100%;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    padding: 10px 0;
+    position: absolute;
+    width: 100%;
+    bottom: -40px;
+    transition: 0.25s ease-in-out;
+}
+
+.container-sanpham .sanpham ul.content-sanpham li:hover .box .box-top .buy-now {
+    bottom: 0;
+    opacity: 95%;
+}
+
+.container-sanpham .sanpham ul.content-sanpham li .box .box-info {
+    padding: 5px 0;
+}
+
+.container-sanpham .sanpham ul.content-sanpham li .box .box-info a.ten {
+    color: black;
+    font-size: 18px;
+    padding: 5px 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container-sanpham .sanpham ul.content-sanpham li .box .box-info .gia {
+    color: #E53935;
+    font-size: 20px;
+    padding: 5px 5px;
+    font-weight: bold;
+}

@@ -1,0 +1,1037 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    background-color: #F3F3F3;
+}
+
+:root {
+    --tone-chudao: #BF3674;
+}
+
+
+/* ĐẦU TRANG */
+.container-dautrang {
+    text-decoration: none;
+    background-color: #F3F3F3;
+}
+
+.header-tong {
+    text-align: center;
+    background-color: var(--tone-chudao);
+}
+
+.header-tong .header {
+    margin: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 17px;
+}
+
+.header-tong .header a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.header-tong .header .logo img {
+    border-radius: 10px;
+    margin: 5px 0;
+}
+
+.header-tong .header .timkiem .form {
+    display: flex;
+}
+
+.header-tong .header .timkiem .form .nhap {
+    outline: none;
+    padding: 10px 10px;
+    width: 25vw;
+    border-radius: 5px 0 0 5px;
+    border: none;
+    font-size: 15px;
+}
+
+.header-tong .header .timkiem .form .icon-timkiem {
+    background-color: #FFA800;
+    border-radius: 0 5px 5px 0;
+    padding: 10px 0;
+    width: 6vw;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.header-tong .header .timkiem .form .icon-timkiem:hover {
+    background-color: #bf8718;
+}
+
+.header-tong .header .spdaxem {
+    background-color: #972B5C;
+    border-radius: 5px;
+}
+
+.header-tong .header .hotromuahang span {
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.header-tong .header .hotromuahang span:hover {
+    color: black;
+}
+
+.header-tong .header a i.fa-regular.fa-user {
+    font-size: 28px;
+}
+
+.header-tong .header a i.fa-solid.fa-cart-shopping {
+    font-size: 28px;
+}
+
+.header-tong .header .taikhoan .login-user a {
+    position: relative;
+    color: black;
+}
+
+.header-tong .header .taikhoan .login-user ul.menu-con {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    list-style: none;
+    width: 150px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: none;
+}
+
+.header-tong .header .taikhoan .login-user li:hover ul.menu-con {
+    display: block;
+}
+
+.header-tong .header .taikhoan .login-user ul.menu-con a {
+    padding: 8px 15px;
+    text-align: left;
+    border-bottom: 1px solid #777777;
+}
+
+.header-tong .header .taikhoan .login-user ul.menu-con a:hover {
+    color: var(--tone-chudao);
+    border-radius: 5px 5px 0 0;
+    border-bottom: 1px solid var(--tone-chudao);
+}
+
+.header-tong .header .taikhoan .login-user ul.menu-con li:last-child a {
+    border: none;
+}
+
+/* END ĐẦU TRANG */
+
+
+
+
+
+/* MENU */
+.container-menu .menu {
+    background-color: #FFA800;
+}
+
+.container-menu .menu .menu-chinh {
+    margin: 0 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-menu .menu .menu-chinh li {
+    font-size: 20px;
+    display: block;
+    padding: 15px 20px;
+}
+
+.container-menu .menu .menu-chinh li:hover {
+    background-color: #972b5c60;
+}
+
+/* END MENU */
+
+
+
+
+
+/* TRANG HOME */
+.container .content {
+    margin: 5px 6%;
+    display: flex;
+    height: auto;
+    box-sizing: border-box;
+}
+
+.container .content .danhmuc {
+    border: 1px solid rgb(210, 210, 210);
+    width: 25%;
+    min-height: 40%;
+    background-color: white;
+    position: relative;
+}
+
+.container .content .danhmuc h3 {
+    text-align: center;
+    background-color: rgb(193, 181, 181);
+    padding: 5px 0;
+    box-sizing: border-box;
+}
+
+.container .content .danhmuc nav ul {
+    padding: 5px;
+}
+
+.content .danhmuc nav ul li {
+    padding: 10px;
+    border-bottom: 1px solid rgba(185, 185, 185, 0.572);
+}
+
+.container .content .danhmuc nav ul li:last-child {
+    border-bottom: none;
+}
+
+.container .content .danhmuc nav ul li:hover a {
+    color: var(--tone-chudao);
+}
+
+.container .content .danhmuc nav ul li .fa-solid.fa-chevron-right {
+    font-size: 10px;
+}
+
+.container .content .danhmuc nav ul li a {
+    color: black;
+    padding-left: 10px;
+}
+
+.container .content .slide {
+    display: flex;
+    padding: 0 5px;
+    max-height: 400px;
+    box-sizing: border-box;
+}
+
+.container .content .slide .slide-1 {
+    /* max-height: 400px; */
+    height: inherit;
+    max-width: 900px;
+}
+
+.container .content .slide .slide-1 img {
+    height: 400px;
+    width: 100%;
+}
+
+.container .content .slide .slide-2 {
+    max-height: 200px;
+    max-width: 330px;
+    padding: 0 0 5px 5px;
+}
+
+.container .content .slide .slide-2 img {
+    height: 198px;
+    width: 100%;
+}
+
+.container .banner {
+    margin: 5px 6%;
+    width: 87%;
+}
+
+.container .banner img {
+    width: 100%;
+}
+
+.container .sp-moi {
+    margin: 5px 6%;
+    padding: 15px 20px;
+    width: 87%;
+    background-color: #FF4D9D;
+}
+
+.container .sp-moi .header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .sp-moi .header a {
+    font-size: 20px;
+    color: #FFDD00;
+    font-weight: bold;
+    border-left: 6px solid #FFDD00
+}
+
+.container .sp-moi .header p {
+    color: white;
+}
+
+.container .sp-moi ul.content-moi {
+    margin: 20px 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.container .sp-moi ul.content-moi li {
+    flex-basis: 25%;
+    padding: 0 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.container .sp-moi ul.content-moi li img {
+    max-width: 100%;
+    /* height: auto; */
+}
+
+.container .sp-moi ul.content-moi li .box {
+    background-color: white;
+}
+
+.container .sp-moi ul.content-moi li .box .box-top {
+    position: relative;
+    overflow: hidden;
+}
+
+.container .sp-moi ul.content-moi li:hover .box .box-top img {
+    filter: opacity(90%);
+}
+
+.container .sp-moi ul.content-moi li .box .box-top .box-img img {
+    display: block;
+    height: 200px;
+    width: 100%;
+}
+
+.container .sp-moi ul.content-moi li .themgiohang .buy-now {
+    background-color: var(--tone-chudao);
+    display: block;
+    width: 100%;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    padding: 10px 0;
+    position: absolute;
+    width: 100%;
+    bottom: -40px;
+    transition: 0.25s ease-in-out;
+}
+
+.container .sp-moi ul.content-moi li:hover .box .box-top .buy-now {
+    bottom: 0;
+    opacity: 90%;
+}
+
+.container .sp-moi ul.content-moi li .box .box-info {
+    padding: 5px 0;
+}
+
+.container .sp-moi ul.content-moi li .box .box-info a.ten {
+    color: black;
+    font-size: 15px;
+    padding: 5px 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container .sp-moi ul.content-moi li .box .box-info .gia {
+    color: #E53935;
+    font-size: 20px;
+    padding: 5px 5px;
+    font-weight: bold;
+}
+
+
+
+
+
+/* SẢN PHẨM YÊU THÍCH */
+.container .sp-like {
+    margin: 10px 6%;
+    padding: 15px 20px;
+    width: 87%;
+    background-color: #FF4D9D;
+}
+
+.container .sp-like .header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .sp-like .header a {
+    font-size: 20px;
+    color: #FFDD00;
+    font-weight: bold;
+    border-left: 6px solid #FFDD00
+}
+
+.container .sp-like .header p {
+    color: white;
+}
+
+.container .sp-like ul.content-like {
+    margin: 20px 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.container .sp-like ul.content-like li {
+    flex-basis: 25%;
+    padding: 0 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.container .sp-like ul.content-like li img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container .sp-like ul.content-like li .box {
+    background-color: white;
+}
+
+.container .sp-like ul.content-like li .box .box-top {
+    position: relative;
+    overflow: hidden;
+}
+
+.container .sp-like ul.content-like li:hover .box .box-top img {
+    filter: opacity(90%);
+}
+
+.container .sp-like ul.content-like li .box .box-top .box-img img {
+    display: block;
+}
+
+.container .sp-like ul.content-like .themgiohang .buy-now {
+    background-color: var(--tone-chudao);
+    display: block;
+    width: 100%;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    padding: 10px 0;
+    position: absolute;
+    width: 100%;
+    bottom: -40px;
+    transition: 0.25s ease-in-out;
+}
+
+.container .sp-like ul.content-like li:hover .box .box-top .buy-now {
+    bottom: 0;
+    opacity: 90%;
+}
+
+.container .sp-like ul.content-like li .box .box-info {
+    padding: 5px 0;
+}
+
+.container .sp-like ul.content-like li .box .box-info a.ten {
+    color: black;
+    font-size: 15px;
+    padding: 5px 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* END SẢN PHẨM YÊU THÍCH */
+
+/* END TRANG HOME */
+
+
+
+
+
+
+
+
+/* GIỎ HÀNG */
+.container-giohang .ten-giohang h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    text-align: center;
+    height: 50px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 20px 6%;
+}
+
+.container-giohang .content-giohang {
+    margin: 20px 6%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px 30px;
+}
+
+.container-giohang .content-giohang table {
+    border: 1px solid black;
+    width: 100%;
+}
+
+.container-giohang .content-giohang table tr th {
+    text-align: center;
+    padding: 20px 30px;
+    background-color: #878686;
+    border: 1px solid black;
+}
+
+.container-giohang .content-giohang table tr td {
+    text-align: center;
+    padding: 10px 10px;
+    border: 1px solid black;
+}
+
+.container-giohang .content-giohang table tr td.tongtien {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.container-giohang .content-giohang table tr td.tien {
+    font-weight: bold;
+    font-size: 20px;
+    color: red;
+}
+
+.container-giohang .content-giohang .btn-dathang {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.container-giohang .content-giohang .btn-dathang input{
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.container-giohang .content-giohang .btn-dathang .dongy {
+    padding: 10px;
+    margin-right: 10px;
+}
+
+/* END GIỎ HÀNG */
+
+
+
+
+
+
+/* BILL */
+.container-billthanhtoan {
+    background-color: white;
+    border-radius: 10px;
+    margin: 20px 6%;
+}
+
+.container-billthanhtoan .infor-billthanhtoan {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-billthanhtoan .infor-billthanhtoan .infor-billthanhtoan-left {
+    margin-right: 40px;
+    border: 1px solid black;
+}
+
+.container-billthanhtoan .infor-billthanhtoan .infor-billthanhtoan-left .text-infor-bill {
+    background-color: #cecece;
+    padding: 10px;
+}
+
+.container-billthanhtoan .infor-billthanhtoan .infor-billthanhtoan-left .form-bill {
+    padding: 10px 0 10px 10px;
+}
+
+.container-billthanhtoan .infor-billthanhtoan .infor-billthanhtoan-left .form-bill table tr td {
+    padding: 5px 0 5px 5px;
+}
+
+.container-billthanhtoan .infor-billthanhtoan .infor-billthanhtoan-left .form-bill table tr td:nth-child(1) {
+    width: 150px;
+}
+
+.container-billthanhtoan .infor-billthanhtoan .infor-billthanhtoan-left .form-bill table tr td:nth-child(2) {
+    width: 800px;
+}
+
+.container-billthanhtoan .infor-billthanhtoan .infor-billthanhtoan-left .form-bill table tr td>input {
+    width: 100%;
+    height: 40px;
+    font-size: 15px;
+    outline: none;
+    padding: 5px;
+}
+
+
+.container-billthanhtoan .infor-billthanhtoan .infor-billthanhtoan-right {
+    border: 1px solid black;
+}
+
+.container-billthanhtoan .infor-billthanhtoan .infor-billthanhtoan-right .text-infor-bill {
+    background-color: #cecece;
+    padding: 10px;
+    width: 30vw;
+}
+
+.container-billthanhtoan .infor-billthanhtoan .infor-billthanhtoan-right .form-bill table tr td {
+    display: block;
+}
+
+.container-billthanhtoan .infor-billthanhtoan .infor-billthanhtoan-right .form-bill {
+    padding: 10px;
+}
+
+.container-billthanhtoan .infor-billthanhtoan .infor-billthanhtoan-right .form-bill table tr td {
+    padding: 20px;
+    font-size: 20px;
+}
+
+.container-billthanhtoan .infor-billthanhtoan .infor-billthanhtoan-right .form-bill table tr td>input {
+    margin-right: 10px;
+}
+
+.container-billthanhtoan .content-bill .ten-donhang {
+    margin-top: 20px;
+}
+
+.container-billthanhtoan .content-bill .ten-donhang h3 {
+    background-color: #cecece;
+    padding: 10px;
+    text-align: center;
+}
+
+.container-billthanhtoan .content-bill table {
+    border: 1px solid black;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.container-billthanhtoan .content-bill table tr th {
+    text-align: center;
+    padding: 20px 30px;
+    background-color: #878686;
+    border: 1px solid black;
+}
+
+.container-billthanhtoan .content-bill table tr td {
+    text-align: center;
+    padding: 10px 10px;
+    border: 1px solid black;
+}
+
+.container-billthanhtoan .content-bill table tr td.tongtien {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.container-billthanhtoan .content-bill table tr td.tien {
+    font-weight: bold;
+    font-size: 20px;
+    color: red;
+}
+
+.container-billthanhtoan .content-bill .btn-dathang {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.container-billthanhtoan .content-bill .btn-dathang input{
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.container-billthanhtoan .content-bill .btn-dathang .dongy {
+    padding: 10px;
+    margin-right: 10px;
+}
+
+
+/* END BILL */
+
+
+
+
+
+
+
+
+/* HOÀN THÀNH ĐẶT HÀNG */
+.container-hoanthanhdathang  {
+    background-color: white;
+    margin: 20px 6%;
+}
+
+.container-hoanthanhdathang .infor-camon {
+    border: 1px solid black;
+}
+
+.container-hoanthanhdathang .infor-camon h3 {
+    background-color: #CECECE;
+    text-align: center;
+    padding: 10px;
+}
+
+.container-hoanthanhdathang .infor-camon p {
+    text-align: center;
+    padding: 30px;
+    font-size: 20px;
+}
+
+.container-hoanthanhdathang .infor-madonhang{
+    border: 1px solid black;
+    margin-top: 20px;
+}
+
+.container-hoanthanhdathang .infor-madonhang h3 {
+    background-color: #CECECE;
+    text-align: center;
+    padding: 10px;
+}
+
+.container-hoanthanhdathang .infor-madonhang p {
+    text-align: center;
+    padding: 30px;
+    font-size: 20px;
+}
+
+.container-hoanthanhdathang .infor-ttdathang{
+    border: 1px solid black;
+    margin-top: 20px;
+}
+
+.container-hoanthanhdathang .infor-ttdathang h3 {
+    background-color: #CECECE;
+    text-align: center;
+    padding: 10px;
+}
+
+.container-hoanthanhdathang .infor-ttdathang  table {
+    padding: 10px;
+}
+
+.container-hoanthanhdathang .infor-ttdathang  table tr td{
+    padding: 10px;
+}
+
+.container-hoanthanhdathang .pttt{
+    border: 1px solid black;
+    margin-top: 20px;
+}
+
+.container-hoanthanhdathang .pttt h3 {
+    background-color: #CECECE;
+    text-align: center;
+    padding: 10px;
+}
+
+.container-hoanthanhdathang .pttt p {
+    text-align: center;
+    padding: 30px;
+    font-size: 20px;
+}
+
+.container-hoanthanhdathang .chitietgiohang{
+    border: 1px solid black;
+    margin-top: 20px;
+}
+
+.container-hoanthanhdathang .chitietgiohang h3 {
+    background-color: #CECECE;
+    text-align: center;
+    padding: 10px;
+}
+
+.container-hoanthanhdathang .chitietgiohang .content-giohang table {
+    border: 1px solid black;
+    width: 100%;
+}
+
+.container-hoanthanhdathang .chitietgiohang .content-giohang table tr th {
+    text-align: center;
+    padding: 20px 30px;
+    background-color: #878686;
+    border: 1px solid black;
+}
+
+.container-hoanthanhdathang .chitietgiohang .content-giohang table tr td {
+    text-align: center;
+    padding: 10px 10px;
+    border: 1px solid black;
+}
+
+.container-hoanthanhdathang .chitietgiohang .content-giohang table tr td.tongtien {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.container-hoanthanhdathang .chitietgiohang .content-giohang table tr td.tien {
+    font-weight: bold;
+    font-size: 20px;
+    color: red;
+}
+
+/* END HOÀN THÀNH ĐẶT HÀNG */
+
+
+
+
+
+
+/* ĐƠN HÀNG CỦA TÔI */
+.container-donhangcuatoi {
+    background-color: white;
+    margin: 20px 6%;
+}
+
+.container-donhangcuatoi .infor-donhangcuatoi{
+    border: 1px solid black;
+    margin-top: 20px;
+}
+
+.container-donhangcuatoi .infor-donhangcuatoi .titel-donhangcuatoi h3 {
+    background-color: #CECECE;
+    text-align: center;
+    padding: 10px;
+}
+
+.container-donhangcuatoi .infor-donhangcuatoi .content-donhangcuatoi table {
+    width: 100%;
+    padding: 10px;
+}
+
+.container-donhangcuatoi .infor-donhangcuatoi .content-donhangcuatoi table tr th {
+    text-align: center;
+    padding: 20px 30px;
+    background-color: #878686;
+    border: 1px solid black;
+}
+
+.container-donhangcuatoi .infor-donhangcuatoi .content-donhangcuatoi table tr td {
+    text-align: center;
+    padding: 10px 10px;
+    border: 1px solid black;
+}
+/* ĐƠN HÀNG CỦA TÔI */
+
+
+
+
+
+
+
+/* CHI TIẾT SẢN PHẨM */
+.container_ctsp {
+    margin: 5px 6%;
+    height: auto;
+    box-sizing: border-box;
+    background-color: white;
+    padding: 5px 20px;
+}
+
+.container_ctsp .content_ctsp a {
+    font-size: 30px;
+    color: red;
+}
+
+.container_ctsp .content_ctsp h3 {
+    font-size: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+}
+
+.container_ctsp .content_ctsp .sp_info {
+    display: flex;
+    padding-top: 20px;
+    justify-content: space-around;
+}
+
+.container_ctsp .content_ctsp .sp_info .info h3 {
+    font-size: 30px;
+    color: red;
+    border-bottom: none;
+    padding-bottom: 5px;
+}
+
+.container_ctsp .content_ctsp .sp_info .info h4 {
+    padding-bottom: 15px;
+}
+
+.container_ctsp .content_ctsp .sp_info .info a {
+    font-size: 17px;
+    color: var(--tone-chudao);
+    border-bottom: 1px solid var(--tone-chudao);
+}
+
+.container_ctsp .content_ctsp .sp_info .info ul {
+    padding-top: 10px;
+}
+
+.container_ctsp .content_ctsp .sp_info .info ul li {
+    list-style: square;
+    padding: 5px 0;
+}
+
+.container_ctsp .content_ctsp .sp_info .quyenloi {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 15px 15px 0 15px;
+    width: 30%;
+    box-sizing: border-box;
+}
+
+.container_ctsp .content_ctsp .sp_info .quyenloi h2 {
+    word-wrap: break-word;
+    text-align: center;
+    color: #459B43;
+    padding-bottom: 10px;
+}
+
+.container_ctsp .content_ctsp .sp_info .quyenloi .group_quyenloi .box {
+    display: flex;
+    padding-bottom: 15px;
+}
+
+.container_ctsp .content_ctsp .sp_info .quyenloi .group_quyenloi .box p {
+    padding: 10px 0 0 15px;
+
+}
+
+.container_ctsp .content_ctsp .dathang {
+    text-align: center;
+}
+
+.container_ctsp .content_ctsp .dathang .soluong {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.container_ctsp .content_ctsp .dathang .soluong p {
+    font-weight: bold;
+    font-size: 20px;
+    padding-right: 20px;
+}
+
+.container_ctsp .content_ctsp .dathang .soluong input[type=number] {
+    width: 5%;
+    outline: none;
+    padding: 5px;
+}
+
+.container_ctsp .content_ctsp .dathang .submit_dathang input[type=submit] {
+    width: 60%;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    background-color: red;
+}
+
+.container_ctsp .content_ctsp .dathang .submit_dathang input[type=submit]:hover {
+    background-color: var(--tone-chudao);
+    cursor: pointer;
+}
+
+.content_binhluan {
+    margin: 10px 6%;
+    height: auto;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.content_binhluan .text_binhluan {
+    text-align: center;
+    padding: 10px 0;
+    background-color: rgb(225, 189, 189);
+}
+
+/* END CHI TIẾT SẢN PHẨM */
+
+
+
+
+
+
+
+
+/* CUỐI TRANG */
+.footer-tong {
+    background-color: #262844;
+    color: white;
+}
+
+.footer-tong .footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 100px;
+}
+
+.footer-tong .footer ul li {
+    padding-bottom: 10px;
+}
+
+.footer-tong .footer ul li h3 {
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.footer-tong .footer ul li h3::before {
+    content: "";
+    height: 3px;
+    width: 50%;
+    background-color: var(--tone-chudao);
+    position: absolute;
+    bottom: 0px;
+}
+
+.footer-tong .footer ul li a {
+    color: white;
+}
+
+.footer-tong .footer ul li a:hover {
+    color: var(--tone-chudao);
+}
+
+.footer-tong .footer ul:nth-child(1) li:nth-child(2) {
+    display: flex;
+}
+
+.footer-tong .footer ul:nth-child(1) li:nth-child(2) i {
+    padding-right: 5px;
+}
+
+.footer-tong .footer ul:nth-child(1) li:nth-child(3) i {
+    padding-right: 5px;
+}
+
+.footer-tong .footer ul:nth-child(1) li:nth-child(4) i {
+    padding-right: 5px;
+}
+
+.footer-tong .banquyen {
+    text-align: center;
+    background-color: #1E1F36;
+    padding: 10px 0;
+}
+
+/* END CUỐI TRANG */

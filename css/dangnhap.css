@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style: none;
+}
+body{
+    background-color: #F3F3F3;
+}
+
+:root {
+    --tone-chudao: #BF3674;
+}
+
+
+.container-dangnhap{
+    text-decoration: none;
+    background-color: #F3F3F3;
+    min-height: 600px;
+}
+
+.header-tong-dangnhap {
+    text-align: center;
+    background-color: var(--tone-chudao);
+}
+
+.header-tong-dangnhap .header-dangnhap {
+    align-items: center;
+}
+
+.header-tong-dangnhap .header-dangnhap .logo img {
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.container-dangnhap .form-tong {
+    background-color: #72D6E8;
+    width: 40%;
+    border: 1px solid #72D6E8;
+    border-radius: 20px;
+    margin: 2% 30%;
+}
+
+.container-dangnhap .form-tong .form {
+    padding: 20px 40px 40px 40px;
+}
+
+.container-dangnhap .form-tong .form .textdangnhap{
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.container-dangnhap .form-tong .form label{
+    font-size: 20px;
+}
+
+.container-dangnhap .form-tong .form input{
+    height: 40px;
+    width: 100%;
+    margin: 5px 0;
+    padding: 0 10px;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+}
+
+.container-dangnhap .form-tong .form .dangnhap{
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    margin: 20px 0;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.container-dangnhap .form-tong .form .dangnhap:hover{
+    background-color: green;
+}
+
+.container-dangnhap .form-tong .form .footer-form{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px;
+}
+
+.container-dangnhap .form-tong .form .footer-form a{
+    color: blue;
+}
+
+.container-dangnhap .form-tong .form .quaylai {
+    margin: 10px 20px;
+}
+.container-dangnhap .form-tong .form .quaylai>a{
+    color: blue;
+}
