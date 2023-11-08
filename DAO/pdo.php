@@ -20,24 +20,24 @@ function pdo_get_connection(){
 function pdo_execute($sql){
     $sql_args = array_slice(func_get_args(), 1);
     try{
-        $conn = pdo_get_connection();
-        $stmt = $conn->prepare($sql);
-        $stmt->execute($sql_args);
+        $conn = pdo_get_connection(); // Lấy kết nối với cơ sở dữ liệu bằng hàm pdo_get_connection()
+        $stmt = $conn->prepare($sql); //Chuẩn bị câu lệnh SQL bằng phương thức prepare() của đối tượng PDOStatement
+        $stmt->execute($sql_args);  //Thực thi câu lệnh SQL bằng phương thức execute() của đối tượng PDOStatement
     }
-    catch(PDOException $e){
+    catch(PDOException $e){ // được thực thi nếu có bất kỳ lỗi nào xảy ra trong khối try
         throw $e;
     }
-    finally{
-        unset($conn);
+    finally{ //được thực thi nếu có bất kỳ lỗi nào xảy ra trong khối try
+        unset($conn); //đóng kết nối với cơ sở dữ liệu bằng cách sử dụng hàm unset().
     }
 }
-function pdo_execute_return_lastInsertID($sql){
-    $sql_args = array_slice(func_get_args(), 1);
+function pdo_execute_return_lastInsertID($sql){ // được sử dụng để thực thi một câu lệnh SQL INSERT và trả về ID của bản ghi đã thêm
+    $sql_args = array_slice(func_get_args(), 1); 
     try{
         $conn = pdo_get_connection();
         $stmt = $conn->prepare($sql);
         $stmt->execute($sql_args);
-        return $conn->lastInsertId();
+        return $conn->lastInsertId(); //Trả về ID của bản ghi đã thêm bằng phương thức lastInsertId() của đối tượng PDO.
     }
     catch(PDOException $e){
         throw $e;
@@ -59,8 +59,8 @@ function pdo_query($sql){
         $conn = pdo_get_connection();
         $stmt = $conn->prepare($sql);
         $stmt->execute($sql_args);
-        $rows = $stmt->fetchAll();
-        return $rows;
+        $rows = $stmt->fetchAll(); // Lấy tất cả các hàng từ tập kết quả bằng phương thức fetchAll() của đối tượng PDOStatement.
+        return $rows; // Trả về các hàng đã lấy dưới dạng mảng.
     }
     catch(PDOException $e){
         throw $e;
@@ -82,7 +82,9 @@ function pdo_query_one($sql){
         $conn = pdo_get_connection();
         $stmt = $conn->prepare($sql);
         $stmt->execute($sql_args);
-        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+        $row = $stmt->fetch(PDO::FETCH_ASSOC); 
+        /*Lấy hàng đầu tiên từ tập kết quả bằng phương thức fetch() của đối tượng PDOStatement, 
+        chỉ định chế độ lấy PDO::FETCH_ASSOC để trả về mảng liên kết.*/
         return $row;
     }
     catch(PDOException $e){
@@ -107,6 +109,7 @@ function pdo_query_value($sql){
         $stmt->execute($sql_args);
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
         return array_values($row)[0];
+        // Trích xuất giá trị đầu tiên từ mảng liên kết bằng cách sử dụng array_values() và chỉ mục [0].
     }
     catch(PDOException $e){
         throw $e;
