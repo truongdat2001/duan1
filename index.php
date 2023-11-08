@@ -108,7 +108,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                     /*
                     You need to ensure that a valid user id is always passed to the insert_giohang function. 
                     If a user is not logged in (i.e., $_SESSION['user']['id'] is not set), 
-                    you should not allow them to add items to the cart. 
+                    you should not allow them to add items to the cart. hahah
                     */ 
                     if (!isset($_SESSION['user']) || !isset($_SESSION['user']['id'])) {
                         // Redirect to login page or show an error message
