@@ -1,7 +1,7 @@
-# 3 câu lệnh để đẩy code lên:
-git add .
-git commit -m "update"
+# 3 CÂU LỆNH ĐỂ ĐẨY CODE LÊN
+git add . <br>
+git commit -m "update" <br>
 git push
 
-# câu lệnh để kéo code về
+# CÂU LỆNH ĐỂ KÉO CODE VỀ
 git pull
