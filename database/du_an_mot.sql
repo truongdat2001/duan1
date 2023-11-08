@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 23, 2023 lúc 12:02 PM
+-- Thời gian đã tạo: Th10 08, 2023 lúc 02:43 PM
 -- Phiên bản máy phục vụ: 10.4.28-MariaDB
 -- Phiên bản PHP: 8.2.4
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `duanmau`
+-- Cơ sở dữ liệu: `du_an_mot`
 --
 
 -- --------------------------------------------------------
@@ -45,8 +45,9 @@ CREATE TABLE `bill` (
 --
 
 INSERT INTO `bill` (`id`, `iduser`, `bill_hovaten`, `bill_diachi`, `bill_email`, `bill_phone`, `bill_pttt`, `ngaydathang`, `tongcong`, `bill_trangthai`) VALUES
-(45, 2, 'Lê Thị Hồng Nhung', 'Xuân Hồi - Lệ Thủy - Quảng Bình', 'nhungkappi@gmail.com', '0862960216', 1, '23:36:04 16/10/2023', 15000000, 0),
-(46, 1, 'Trương Văn Tiến Đạt', '', 'dattruong792001@gmail.com', '', 1, '22:24:33 18/10/2023', 29500000, 0);
+(65, 4, 'Le Quang Van Quyen', 'Sen thượng 1, sen thủy, lệ thủy, quảng bình', 'lequangvanquyen@gmail.com', '0813840506', 1, '15:43:49 06/11/2023', 12000000, 0),
+(66, 4, 'Le Quang Van Quyen', '', 'lequangvanquyen@gmail.com', '', 1, '17:13:23 08/11/2023', 31000000, 0),
+(68, 4, 'Le Quang Van Quyen', 'Sen thượng 1, sen thủy, lệ thủy, quảng bình', 'lequangvanquyen@gmail.com', '0813840506', 1, '17:27:53 08/11/2023', 12000000, 0);
 
 -- --------------------------------------------------------
 
@@ -57,7 +58,7 @@ INSERT INTO `bill` (`id`, `iduser`, `bill_hovaten`, `bill_diachi`, `bill_email`,
 CREATE TABLE `binhluan` (
   `id` int(11) NOT NULL,
   `hovaten` varchar(100) NOT NULL,
-  `iduser` int(10) DEFAULT NULL,
+  `iduser` int(10) NOT NULL,
   `idpro` int(10) NOT NULL,
   `noidung` varchar(255) NOT NULL,
   `ngaybinhluan` varchar(50) NOT NULL
@@ -71,7 +72,8 @@ INSERT INTO `binhluan` (`id`, `hovaten`, `iduser`, `idpro`, `noidung`, `ngaybinh
 (22, 'Trương Văn Tiến Đạt', 1, 20, 'sản phẩm này đẹp quá', '23:15:18 15/10/2023'),
 (23, 'Trương Văn Tiến Đạt', 1, 20, 'chụp ảnh đẹp', '23:22:40 15/10/2023'),
 (24, 'Trương Văn Tiến Đạt', 1, 20, 'sadasdasdkjasjdhaskdhasjdhasjhdasljjdnhasljdhasjkdhasjdhasjd', '23:28:06 15/10/2023'),
-(26, 'Lê Thị Hồng Nhung', 2, 19, 'yuhgfgfghfg', '02:21:41 16/10/2023');
+(26, 'Lê Thị Hồng Nhung', 2, 19, 'yuhgfgfghfg', '02:21:41 16/10/2023'),
+(30, 'Le Quang Van Quyen', 4, 23, 'xaau', '18:02:29 08/11/2023');
 
 -- --------------------------------------------------------
 
@@ -122,7 +124,16 @@ CREATE TABLE `giohang` (
 INSERT INTO `giohang` (`id`, `iduser`, `idpro`, `hinh`, `name`, `gia`, `soluong`, `thanhtien`, `idbill`) VALUES
 (63, 2, 12, 'samsung-galaxy-m52-5g-1-600x600.png', 'Samsung Galaxy M52', 9000000, 1, 9000000, 45),
 (64, 2, 13, 'Canon EOS M3 (Body).png', 'Canon EOS M3 (Body)', 6000000, 1, 6000000, 45),
-(65, 1, 15, 'Canon EOS R (Body).png', 'Canon EOS R (Body)', 29500000, 1, 29500000, 46);
+(65, 1, 15, 'Canon EOS R (Body).png', 'Canon EOS R (Body)', 29500000, 1, 29500000, 46),
+(82, 1, 22, 'Samsung Galaxy S22 5G 128GB.png', 'Samsung Galaxy S22 5G', 12000000, 1, 12000000, 63),
+(83, 1, 21, 'iPhone 15 Pro Max 256GB.png', 'iPhone 15 Pro Max ', 34000000, 1, 34000000, 63),
+(84, 1, 18, 'Canon EF 24-70mm f2.8L II USM.png', 'Canon EF 24-70mm', 2000000, 1, 2000000, 63),
+(85, 3, 23, 'Samsung Galaxy A34 5G.png', 'Samsung Galaxy A34 5G', 7000000, 1, 7000000, 64),
+(86, 4, 22, 'Samsung Galaxy S22 5G 128GB.png', 'Samsung Galaxy S22 5G', 12000000, 1, 12000000, 65),
+(87, 4, 23, 'Samsung Galaxy A34 5G.png', 'Samsung Galaxy A34 5G', 7000000, 1, 7000000, 66),
+(88, 4, 22, 'Samsung Galaxy S22 5G 128GB.png', 'Samsung Galaxy S22 5G', 12000000, 1, 12000000, 66),
+(89, 4, 22, 'Samsung Galaxy S22 5G 128GB.png', 'Samsung Galaxy S22 5G', 12000000, 1, 12000000, 66),
+(90, 4, 22, 'Samsung Galaxy S22 5G 128GB.png', 'Samsung Galaxy S22 5G', 12000000, 1, 12000000, 68);
 
 -- --------------------------------------------------------
 
@@ -186,7 +197,8 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `hovaten`, `username`, `password`, `email`, `diachi`, `phone`, `vaitro`) VALUES
 (1, 'Trương Văn Tiến Đạt', 'tiendat', 'tiendat', 'dattruong792001@gmail.com', NULL, NULL, 'admin'),
 (2, 'Lê Thị Hồng Nhung', 'nhungxinh', 'nhung', 'nhungkappi@gmail.com', 'Xuân Hồi - Lệ Thủy - Quảng Bình', '0862960216', 'nguoidung'),
-(3, 'Trương Văn Đạt', 'tiendat1', '123', 'dattruong07092001@gmail.com', NULL, NULL, 'nguoidung');
+(3, 'Trương Văn Đạt', 'tiendat1', '123', 'dattruong07092001@gmail.com', NULL, NULL, 'nguoidung'),
+(4, 'Le Quang Van Quyen', 'vanquyenst1', 'vanquyenst1', 'lequangvanquyen@gmail.com', NULL, NULL, 'nguoidung');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -196,13 +208,16 @@ INSERT INTO `users` (`id`, `hovaten`, `username`, `password`, `email`, `diachi`,
 -- Chỉ mục cho bảng `bill`
 --
 ALTER TABLE `bill`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_bill_user` (`iduser`);
 
 --
 -- Chỉ mục cho bảng `binhluan`
 --
 ALTER TABLE `binhluan`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `idpro` (`idpro`),
+  ADD KEY `iduser` (`iduser`);
 
 --
 -- Chỉ mục cho bảng `danhmuc`
@@ -240,13 +255,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT cho bảng `bill`
 --
 ALTER TABLE `bill`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
 
 --
 -- AUTO_INCREMENT cho bảng `binhluan`
 --
 ALTER TABLE `binhluan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT cho bảng `danhmuc`
@@ -258,7 +273,7 @@ ALTER TABLE `danhmuc`
 -- AUTO_INCREMENT cho bảng `giohang`
 --
 ALTER TABLE `giohang`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
 
 --
 -- AUTO_INCREMENT cho bảng `sanpham`
@@ -270,11 +285,24 @@ ALTER TABLE `sanpham`
 -- AUTO_INCREMENT cho bảng `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Các ràng buộc cho các bảng đã đổ
 --
+
+--
+-- Các ràng buộc cho bảng `bill`
+--
+ALTER TABLE `bill`
+  ADD CONSTRAINT `fk_bill_user` FOREIGN KEY (`iduser`) REFERENCES `users` (`id`);
+
+--
+-- Các ràng buộc cho bảng `binhluan`
+--
+ALTER TABLE `binhluan`
+  ADD CONSTRAINT `fk_cm_sp` FOREIGN KEY (`idpro`) REFERENCES `sanpham` (`id_sp`),
+  ADD CONSTRAINT `fk_cm_user` FOREIGN KEY (`iduser`) REFERENCES `users` (`id`);
 
 --
 -- Các ràng buộc cho bảng `giohang`
