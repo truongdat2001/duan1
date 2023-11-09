@@ -47,7 +47,7 @@ function pdo_execute_return_lastInsertID($sql){ // được sử dụng để th
     }
 }
 /**
- * Thực thi câu lệnh sql truy vấn dữ liệu (SELECT)
+ * Thực thi câu lệnh sql truy vấn dữ liệu (SELECT) ?
  * @param string $sql câu lệnh sql
  * @param array $args mảng giá trị cung cấp cho các tham số của $sql
  * @return array mảng các bản ghi
