@@ -62,7 +62,7 @@
                         </div>
                     </div>
                     <div class="box-info">
-                        <a class="ten" href="' . $link_sp . '" title="' . $ten_sp . '">' . $ten_sp . '</a>
+                        <a class="ten" title="' . $ten_sp . '" href="' . $link_sp . '">' . $ten_sp . '</a>
                         <div class="gia">' . $soTienDinhDang . '' . $vnd . '</div>
                     </div>
                     </div>
