@@ -4,7 +4,8 @@
         extract($onesp);
         $img = $hinh_path . $hinh;
         $vnd = " VNĐ";
-
+        $soTienDinhDang = number_format($don_gia, 0, ',', '.');
+        
         echo '<h3>' . $ten_sp . '</h3>
             <div class="sp_info">
                 <div class="img">
@@ -12,7 +13,7 @@
                 </div>
     
                 <div class="info">
-                    <h3>' . $don_gia . '' . $vnd . '</h3>
+                    <h3>' . $soTienDinhDang . '' . $vnd . '</h3>
                     <h4>Tình trạng: Còn hàng</h4>
                     <a href="">ĐẶC ĐIỂM NỔI BẬT</a>
                     <ul>
@@ -58,7 +59,7 @@
                     <input type="hidden" name="ten_sp" value="' . $ten_sp . '">
                     <input type="hidden" name="hinh" value="' . $hinh . '">
                     <input type="hidden" name="don_gia" value="' . $don_gia . '">
-                    <input type="submit" name="themgiohang" value="MUA NGAY VỚI GIÁ ' . $don_gia . '' . $vnd . '">
+                    <input type="submit" name="themgiohang" value="MUA NGAY VỚI GIÁ ' . $soTienDinhDang . '' . $vnd . '">
                 </div>
             </div>';
         ?>

@@ -36,6 +36,7 @@
                 $img = $hinh_path . $hinh;
                 $link_sp = "index.php?act=sanpham_ct&id_sp=" . $id_sp;
                 $vnd = " VNĐ";
+                $soTienDinhDang = number_format($don_gia, 0, ',', '.');
                 echo '<li>
                     <div class="box">
                     <div class="box-top">
@@ -54,7 +55,7 @@
                     </div>
                     <div class="box-info">
                         <a class="ten" href="' . $link_sp . '">' . $ten_sp . '</a>
-                        <div class="gia">' . $don_gia . '' . $vnd . '</div>
+                        <div class="gia">' . $soTienDinhDang . '' . $vnd . '</div>
                     </div>
                     </div>
                     </li>';
