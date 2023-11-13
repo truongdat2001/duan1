@@ -34,25 +34,26 @@
 
 .container-sanpham .sanpham {
     background-color: white;
+    padding: 10px 20px;
 }
 
 .container-sanpham .sanpham ul.content-sanpham {
-    margin: 20px 40px 0;
-    display: flex;
-    flex-wrap: wrap;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-rows: auto;
+    grid-gap: 20px;
 }
 
 .container-sanpham .sanpham ul.content-sanpham li {
-    flex-basis: 20%;
-    padding-left: 15px;
-    padding-right: 15px;
-    box-sizing: border-box;
-    margin-bottom: 20px;
+    padding-bottom: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .container-sanpham .sanpham ul.content-sanpham li img {
     max-width: 100%;
-    /* height: auto; */
 }
 
 .container-sanpham .sanpham ul.content-sanpham li .box {
@@ -97,6 +98,9 @@
 
 .container-sanpham .sanpham ul.content-sanpham li .box .box-info {
     padding: 5px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .container-sanpham .sanpham ul.content-sanpham li .box .box-info a.ten {
