@@ -14,7 +14,7 @@
                     }
                     ?>
                     <!-- <li>
-                        <a href=""><i class="fa-solid fa-chevron-right"></i> Điện thoại</a>
+                        <a href=""><i class="fa-solid fa-chevron-right"></i>Điện thoại</a>
                     </li>
                     <li>
                         <a href=""><i class="fa-solid fa-chevron-right"></i> Máy ảnh</a>
@@ -66,7 +66,7 @@
                 $img = $hinh_path . $hinh;
                 $link_sp = "index.php?act=sanpham_ct&id_sp=" . $id_sp;
                 $vnd = " VNĐ";
-                
+
                 echo '<li>
                     <div class="box">
                     <div class="box-top">
