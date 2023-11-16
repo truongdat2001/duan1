@@ -66,11 +66,7 @@
                 $img = $hinh_path . $hinh;
                 $link_sp = "index.php?act=sanpham_ct&id_sp=" . $id_sp;
                 $vnd = " VNĐ";
-<<<<<<< HEAD
-
-=======
                 $soTienDinhDang = number_format($don_gia, 0, ',', '.');
->>>>>>> 34a253e74e08778a65b06ac97ce8c6a3ebba871c
                 echo '<li>
                     <div class="box">
                     <div class="box-top">
