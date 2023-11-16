@@ -44,6 +44,7 @@
                 $img = $hinh_path . $hinh;
                 $link_sp = "index.php?act=sanpham_ct&id_sp=" . $id_sp;
                 $vnd = " VNĐ";
+                $soTienDinhDang = number_format($don_gia, 0, ',', '.');
                 echo '<li>
                     <div class="box">
                     <div class="box-top">
@@ -61,8 +62,8 @@
                         </div>
                     </div>
                     <div class="box-info">
-                        <a class="ten" href="' . $link_sp . '">' . $ten_sp . '</a>
-                        <div class="gia">' . $don_gia . '' . $vnd . '</div>
+                        <a class="ten" title="' . $ten_sp . '" href="' . $link_sp . '">' . $ten_sp . '</a>
+                        <div class="gia">' . $soTienDinhDang . '' . $vnd . '</div>
                     </div>
                     </div>
                     </li>';
@@ -74,10 +75,18 @@
                         <a href="" class="box-img">
                             <img src="img/canon-60d.png" alt="">
                         </a>
-                        <a href="" class="buy-now"><i class="fa-solid fa-basket-shopping" style="color: #ffffff;"></i> Mua ngay</a>
+                        <div class="themgiohang">
+                            <form action="index.php?act=themgiohang" method="post">
+                                <input type="hidden" name="id_sp" value="' . $id_sp . '">
+                                <input type="hidden" name="ten_sp" value="' . $ten_sp . '">
+                                <input type="hidden" name="hinh" value="' . $hinh . '">
+                                <input type="hidden" name="don_gia" value="' . $don_gia . '">
+                                <input type="submit" name="themgiohang" class="buy-now" value="Thêm vào giỏ hàng"></input>
+                            </form>
+                        </div>
                     </div>
                     <div class="box-info">
-                        <a class="ten" href="">Canon 60D</a>
+                        <a class="ten" href="">Canon 60D sadsadasdasdas.</a>
                         <div class="gia">4.000.000 VNĐ</div>
                     </div>
                 </div>

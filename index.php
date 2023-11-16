@@ -57,7 +57,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             }
             $ds_sp = loadall_sanpham("", $id_dm);
             $namedm = load_tendm($id_dm);
-            include "view/sanpham.php";
+            include "view/sanpham_dm.php";
             break;
 
         case 'themgiohang':

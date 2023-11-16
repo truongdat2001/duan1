@@ -5,7 +5,7 @@ if (isset($_POST['gui']) == true) {
     if ($email == "") {
         $thongbao = "Hãy nhập email";
     } else {
-        $conn = new PDO("mysql:host=localhost;dbname=duanmau;charset=utf8", "root", "");
+        $conn = new PDO("mysql:host=localhost;dbname=du_an_mot;charset=utf8", "root", "");
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         $sql = "SELECT * FROM users WHERE email = ?";

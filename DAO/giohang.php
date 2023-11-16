@@ -5,6 +5,7 @@ function hienthi_spgiohang($xoa)
     $tong = 0;
     $i = 0;
     $vnd = " VNĐ";
+    
     if ($xoa == 1) {
         $xoasp_th = '<th>Thao tác</th>';
         $xoasp_td = '<td><a href="index.php?act=xoagiohang&id-cart=' . $i . '"><input type="button" value="Xóa"></a></td>';
@@ -22,11 +23,16 @@ function hienthi_spgiohang($xoa)
             <th>Thành tiền</th>
             ' . $xoasp_th . '
         </tr>';
+        
 
     foreach ($_SESSION['donhang'] as $cart) {
         $hinh = $hinh_path . $cart[2];
         $thanhtien = $cart[3] * $cart[4];
         $tong = $tong + $thanhtien;
+        
+        
+        $soTienDinhDang = number_format($cart[3], 0, ',', '.');
+        $dinhDangSoTien = number_format($thanhtien, 0, ',', '.');
         if ($xoa == 1) {
             $xoasp_th = '<th>Thao tác</th>';
             $xoasp_td = '<td><a href="index.php?act=xoagiohang&id-cart=' . $i . '"><input type="button" value="Xóa"></a></td>';
@@ -39,16 +45,17 @@ function hienthi_spgiohang($xoa)
         echo '<tr>
                 <td>' . $cart[1] . '</td>
                 <td><img src="' . $hinh . '" width="100px" height="100px" alt=""></td>
-                <td>' . $cart[3] . ' ' . $vnd . '</td>
+                <td>' . $soTienDinhDang . ' ' . $vnd . '</td>
                 <td>' . $cart[4] . '</td>
-                <td>' . $thanhtien . ' ' . $vnd . '</td>
+                <td>' . $dinhDangSoTien . ' ' . $vnd . '</td>
                 ' . $xoasp_td . '
             </tr>';
         $i += 1;
     }
+    $dinhDangTongTien = number_format($tong, 0, ',', '.');
     echo '<tr>
             <td class="tongtien" colspan="4">Tổng tiền: </td>
-            <td class="tien">' . $tong . ' ' . $vnd . '</td>
+            <td class="tien">' . $dinhDangTongTien . ' ' . $vnd . '</td>
             ' . $xoasp_td2 . '
         </tr>';
 }
@@ -71,19 +78,22 @@ function billct($listbill)
     foreach ($listbill as $cart) {
         $hinh = $hinh_path . $cart['hinh'];
         $tong = $tong + $cart['gia'];
+        $dinhDangTongTien = number_format($tong, 0, ',', '.');
+        $soTienDinhDang = number_format($cart['gia'], 0, ',', '.');
+        $dinhDangSoTien = number_format($cart['thanhtien'], 0, ',', '.');
         echo '<tr>
                 <td>' . $i . '</td>
                 <td>' . $cart['name'] . '</td>
                 <td><img src="' . $hinh . '" width="100px" height="100px" alt=""></td>
-                <td>' . $cart['gia'] . ' ' . $vnd . '</td>
+                <td>' . $soTienDinhDang . ' ' . $vnd . '</td>
                 <td>' . $cart['soluong'] . '</td>
-                <td>' . $cart['thanhtien'] . ' ' . $vnd . '</td>
+                <td>' . $dinhDangSoTien . ' ' . $vnd . '</td>
             </tr>';
         $i += 1;
     }
     echo '<tr>
             <td class="tongtien" colspan="5">Tổng tiền: </td>
-            <td class="tien">' . $tong . ' ' . $vnd . '</td>
+            <td class="tien">' . $dinhDangTongTien . ' ' . $vnd . '</td>
         </tr>';
 }
 

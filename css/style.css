@@ -254,9 +254,11 @@ body {
     width: 100%;
 }
 
+
+/* SẢN PHẨM MỚI */
 .container .sp-moi {
-    margin: 5px 6%;
-    padding: 15px 20px;
+    margin: 10px 6%;
+    padding: 15px 40px;
     width: 87%;
     background-color: #FF4D9D;
 }
@@ -264,6 +266,7 @@ body {
 .container .sp-moi .header {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 10px;
 }
 
 .container .sp-moi .header a {
@@ -278,17 +281,17 @@ body {
 }
 
 .container .sp-moi ul.content-moi {
-    margin: 20px 40px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 20px 40px;
 }
 
 .container .sp-moi ul.content-moi li {
-    flex-basis: 25%;
-    padding: 0 10px;
-    box-sizing: border-box;
-    margin-bottom: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .container .sp-moi ul.content-moi li img {
@@ -298,6 +301,7 @@ body {
 
 .container .sp-moi ul.content-moi li .box {
     background-color: white;
+    border: 1px solid rgb(156, 156, 156);
 }
 
 .container .sp-moi ul.content-moi li .box .box-top {
@@ -337,11 +341,14 @@ body {
 
 .container .sp-moi ul.content-moi li .box .box-info {
     padding: 5px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .container .sp-moi ul.content-moi li .box .box-info a.ten {
     color: black;
-    font-size: 15px;
+    font-size: 18px;
     padding: 5px 5px;
     font-family: 'Roboto', sans-serif;
 }
@@ -360,7 +367,7 @@ body {
 /* SẢN PHẨM YÊU THÍCH */
 .container .sp-like {
     margin: 10px 6%;
-    padding: 15px 20px;
+    padding: 15px 40px;
     width: 87%;
     background-color: #FF4D9D;
 }
@@ -368,6 +375,7 @@ body {
 .container .sp-like .header {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 10px;
 }
 
 .container .sp-like .header a {
@@ -382,26 +390,27 @@ body {
 }
 
 .container .sp-like ul.content-like {
-    margin: 20px 40px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 20px 40px;
 }
 
 .container .sp-like ul.content-like li {
-    flex-basis: 25%;
-    padding: 0 10px;
-    box-sizing: border-box;
-    margin-bottom: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .container .sp-like ul.content-like li img {
     max-width: 100%;
-    height: auto;
+    /* height: auto; */
 }
 
 .container .sp-like ul.content-like li .box {
     background-color: white;
+    border: 1px solid rgb(156, 156, 156);
 }
 
 .container .sp-like ul.content-like li .box .box-top {
@@ -415,6 +424,8 @@ body {
 
 .container .sp-like ul.content-like li .box .box-top .box-img img {
     display: block;
+    height: 200px;
+    width: 100%;
 }
 
 .container .sp-like ul.content-like .themgiohang .buy-now {
@@ -439,11 +450,14 @@ body {
 
 .container .sp-like ul.content-like li .box .box-info {
     padding: 5px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .container .sp-like ul.content-like li .box .box-info a.ten {
     color: black;
-    font-size: 15px;
+    font-size: 18px;
     padding: 5px 5px;
     font-family: 'Roboto', sans-serif;
 }
