@@ -13,6 +13,7 @@
                             </li>';
                     }
                     ?>
+                    <!-- lol -->
                     <!-- <li>
                         <a href=""><i class="fa-solid fa-chevron-right"></i>Điện thoại</a>
                     </li>
@@ -66,11 +67,8 @@
                 $img = $hinh_path . $hinh;
                 $link_sp = "index.php?act=sanpham_ct&id_sp=" . $id_sp;
                 $vnd = " VNĐ";
-<<<<<<< HEAD
 
-=======
                 $soTienDinhDang = number_format($don_gia, 0, ',', '.');
->>>>>>> 34a253e74e08778a65b06ac97ce8c6a3ebba871c
                 echo '<li>
                     <div class="box">
                     <div class="box-top">
@@ -158,7 +156,7 @@
                     </div>
                     </li>';
             }
-            ?>
+            ?> 
 
             <!-- <li>
                 <div class="box">
