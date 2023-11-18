@@ -33,6 +33,7 @@ if (isset($_SESSION['user'])) {
 
                 case 'xoa_dm':
                     if (isset($_GET['id_dm']) && ($_GET['id_dm'] > 0)) {
+                        $id_dm = $_GET['id_dm'];
                         delete_danhmuc($id_dm);
                         $thongbao = "Xóa thành công";
                     }
