@@ -52,7 +52,8 @@
     </section>
 
     <div class="banner">
-        <a href=""><img src="img/banner.png" alt=""></a>
+        <!-- <a href=""><img src="img/banner.png" alt=""></a> -->
+        <a href=""><img src="img/banner-title.gif" alt=""></a>
     </div>
 
     <section class="sp-moi">
