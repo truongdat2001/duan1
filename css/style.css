@@ -255,8 +255,7 @@ body {
 }
 
 
-/* SẢN PHẨM MỚI */
-.container .sp-moi {
+SẢN PHẨM MỚI .container .sp-moi {
     margin: 10px 6%;
     padding: 15px 40px;
     width: 87%;
@@ -296,7 +295,6 @@ body {
 
 .container .sp-moi ul.content-moi li img {
     max-width: 100%;
-    /* height: auto; */
 }
 
 .container .sp-moi ul.content-moi li .box {
@@ -359,9 +357,6 @@ body {
     padding: 5px 5px;
     font-weight: bold;
 }
-
-
-
 
 
 /* SẢN PHẨM YÊU THÍCH */
@@ -529,7 +524,7 @@ body {
     margin-top: 20px;
 }
 
-.container-giohang .content-giohang .btn-dathang input{
+.container-giohang .content-giohang .btn-dathang input {
     font-weight: bold;
     cursor: pointer;
 }
@@ -667,7 +662,7 @@ body {
     margin-top: 20px;
 }
 
-.container-billthanhtoan .content-bill .btn-dathang input{
+.container-billthanhtoan .content-bill .btn-dathang input {
     font-weight: bold;
     cursor: pointer;
 }
@@ -688,7 +683,7 @@ body {
 
 
 /* HOÀN THÀNH ĐẶT HÀNG */
-.container-hoanthanhdathang  {
+.container-hoanthanhdathang {
     background-color: white;
     margin: 20px 6%;
 }
@@ -709,7 +704,7 @@ body {
     font-size: 20px;
 }
 
-.container-hoanthanhdathang .infor-madonhang{
+.container-hoanthanhdathang .infor-madonhang {
     border: 1px solid black;
     margin-top: 20px;
 }
@@ -726,7 +721,7 @@ body {
     font-size: 20px;
 }
 
-.container-hoanthanhdathang .infor-ttdathang{
+.container-hoanthanhdathang .infor-ttdathang {
     border: 1px solid black;
     margin-top: 20px;
 }
@@ -737,15 +732,15 @@ body {
     padding: 10px;
 }
 
-.container-hoanthanhdathang .infor-ttdathang  table {
+.container-hoanthanhdathang .infor-ttdathang table {
     padding: 10px;
 }
 
-.container-hoanthanhdathang .infor-ttdathang  table tr td{
+.container-hoanthanhdathang .infor-ttdathang table tr td {
     padding: 10px;
 }
 
-.container-hoanthanhdathang .pttt{
+.container-hoanthanhdathang .pttt {
     border: 1px solid black;
     margin-top: 20px;
 }
@@ -762,7 +757,7 @@ body {
     font-size: 20px;
 }
 
-.container-hoanthanhdathang .chitietgiohang{
+.container-hoanthanhdathang .chitietgiohang {
     border: 1px solid black;
     margin-top: 20px;
 }
@@ -815,7 +810,7 @@ body {
     margin: 20px 6%;
 }
 
-.container-donhangcuatoi .infor-donhangcuatoi{
+.container-donhangcuatoi .infor-donhangcuatoi {
     border: 1px solid black;
     margin-top: 20px;
 }
@@ -843,6 +838,7 @@ body {
     padding: 10px 10px;
     border: 1px solid black;
 }
+
 /* ĐƠN HÀNG CỦA TÔI */
 
 

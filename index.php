@@ -4,7 +4,7 @@ include "DAO/sanpham.php";
 include "DAO/danhmuc.php";
 include "DAO/giohang.php";
 include "view/dautrang.php";
-include "view/menu.php";
+// include "view/menu.php";
 include "bientong.php";
 
 if (!isset($_SESSION['donhang'])) {

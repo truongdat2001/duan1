@@ -44,11 +44,11 @@ session_start();
                         ?>
                             <li><a href=""><i class="fa-regular fa-user" style="color: white;"></i></a>
                                 <ul class="menu-con">
-                                    <li><a href="./capnhattaikhoan.php">Xin chào <?=$hovaten?></a></li>
+                                    <li><a href="./capnhattaikhoan.php">Xin chào <?= $hovaten ?></a></li>
                                     <li><a href="index.php?act=mybill">Đơn hàng của tôi</a></li>
                                     <li><a href="./doimk.php">Đổi mật khẩu</a></li>
-                                    <?php if($vaitro == 'admin') {?>                                    
-                                    <li><a href="./admin/index.php">Đăng nhập Admin</a></li>
+                                    <?php if ($vaitro == 'admin') { ?>
+                                        <li><a href="./admin/index.php">Đăng nhập Admin</a></li>
                                     <?php } ?>
                                     <li><a href="index.php?act=dangxuat">Đăng xuất</a></li>
                                 </ul>
