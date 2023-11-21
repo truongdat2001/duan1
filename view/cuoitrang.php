@@ -32,7 +32,7 @@
             <li><a href="">Giải quyết vấn đề khiếu nại</a></li>
         </ul>
     </div>
-    <p class="banquyen">&copy;2023. Nhóm 3 phép thuật Winx</p>
+    <p class="banquyen">&copy; Cùng với sự hợp tác của Trương Văn Tiến Đạt, Lê Quang Văn Quyến & Đặng Hưng Bảo</p>
 </footer>
 </body>
 
