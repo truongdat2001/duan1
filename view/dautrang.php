@@ -19,7 +19,7 @@ session_start();
         <header class="header-tong">
             <div class="header">
                 <div class="logo">
-                    <a href="./index.php"><img src="./img/logo.jpg" alt="logo" style="width: 150px"></a>
+                    <a href="./index.php"><img src="./img/logo.png" alt="logo" style="width: 150px; height: 60px"></a>
                 </div>
                 <div class="timkiem">
                     <form class="form" action="index.php?act=timsp" method="post">

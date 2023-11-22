@@ -41,7 +41,7 @@
 
         <div class="slide">
             <div class="slide-1">
-                <a href=""><img src="img/slider_1.png" alt=""></a>
+                <a href=""><img src="img/slider_1.png" style="width: 560px" alt=""></a>
             </div>
 
             <div class="slide-2">
@@ -52,7 +52,7 @@
     </section>
 
     <div class="banner">
-        <a href=""><img src="img/banner.png" alt=""></a>
+        <a href=""><img src="img/banner.png" style="height: 300px" alt=""></a>
     </div>
 
     <section class="sp-moi">
