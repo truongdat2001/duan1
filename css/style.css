@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Poppins', sans-serif;
     text-decoration: none;
     box-sizing: border-box;
     list-style: none;
@@ -14,7 +14,6 @@ body {
 :root {
     --tone-chudao: #BF3674;
 }
-
 
 /* ĐẦU TRANG */
 .container-dautrang {
@@ -166,11 +165,14 @@ body {
 
 /* TRANG HOME */
 .container .content {
+    /* padding: 10px 12%; */
     margin: 5px 6%;
     display: flex;
     width: 100%;
     height: 400px;
 }
+
+
 
 .container .content .danhmuc {
     border: 1px solid rgb(210, 210, 210);
@@ -263,7 +265,7 @@ body {
     margin: 10px 6%;
     padding: 15px 40px;
     width: 87%;
-    background-color: #FF4D9D;
+    background-color: black;
 }
 
 .container .sp-moi .header {
@@ -284,11 +286,15 @@ body {
 }
 
 .container .sp-moi ul.content-moi {
-    width: 100%;
+    /* width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
-    grid-gap: 20px 40px;
+    grid-gap: 20px 40px; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, auto));
+    align-items: center;
+    gap: 2rem;
 }
 
 .container .sp-moi ul.content-moi li {
@@ -305,21 +311,26 @@ body {
 .container .sp-moi ul.content-moi li .box {
     background-color: white;
     border: 1px solid rgb(156, 156, 156);
+    border-radius: 10px;
 }
 
 .container .sp-moi ul.content-moi li .box .box-top {
     position: relative;
     overflow: hidden;
+    /* width: 300px; */
+    height: 300px;
 }
 
 .container .sp-moi ul.content-moi li:hover .box .box-top img {
     filter: opacity(90%);
+
 }
 
 .container .sp-moi ul.content-moi li .box .box-top .box-img img {
     display: block;
-    height: 200px;
     width: 100%;
+    object-fit: cover;
+
 }
 
 .container .sp-moi ul.content-moi li .themgiohang .buy-now {
@@ -390,11 +401,15 @@ body {
 }
 
 .container .sp-like ul.content-like {
-    width: 100%;
+    /* width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
-    grid-gap: 20px 40px;
+    grid-gap: 20px 40px; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, auto));
+    align-items: center;
+    gap: 2rem;
 }
 
 .container .sp-like ul.content-like li {
@@ -411,11 +426,14 @@ body {
 .container .sp-like ul.content-like li .box {
     background-color: white;
     border: 1px solid rgb(156, 156, 156);
+    border-radius: 10px;
 }
 
 .container .sp-like ul.content-like li .box .box-top {
     position: relative;
     overflow: hidden;
+    height: 300px;
+
 }
 
 .container .sp-like ul.content-like li:hover .box .box-top img {
@@ -423,9 +441,12 @@ body {
 }
 
 .container .sp-like ul.content-like li .box .box-top .box-img img {
-    display: block;
+    /* display: block;
     height: 200px;
+    width: 100%; */
+    display: block;
     width: 100%;
+    object-fit: cover;
 }
 
 .container .sp-like ul.content-like .themgiohang .buy-now {

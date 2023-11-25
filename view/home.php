@@ -52,7 +52,7 @@
     </section>
 
     <div class="banner">
-        <a href=""><img src="img/banner.png" style="height: 300px" alt=""></a>
+        <a href=""><img src="img/GIF-BF-DESK-1200x120.gif" alt=""></a>
     </div>
 
     <section class="sp-moi">
@@ -119,6 +119,10 @@
         </ul>
     </section>
 
+    <div class="banner">
+        <a href=""><img src="img/Deal-ngon-tgdd-1200x120-1.webp" alt=""></a>
+    </div>
+
 
     <section class="sp-like">
         <div class="header">
@@ -155,7 +159,7 @@
                     </div>
                     </li>';
             }
-            ?> 
+            ?>
 
             <!-- <li>
                 <div class="box">

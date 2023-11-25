@@ -11,6 +11,7 @@ session_start();
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/sanpham.css">
     <link rel="stylesheet" href="./css/dangky.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/1974627856.js" crossorigin="anonymous"></script>
 </head>
 
