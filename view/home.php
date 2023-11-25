@@ -41,7 +41,7 @@
 
         <div class="slide">
             <div class="slide-1">
-                <a href=""><img src="img/slider_1.png" style="width: 560px" alt=""></a>
+                <a href=""><img src="img/slider_1.png" alt=""></a>
             </div>
 
             <div class="slide-2">

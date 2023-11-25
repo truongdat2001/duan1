@@ -164,21 +164,17 @@ body {
 /* END MENU */
 
 
-
-
-
 /* TRANG HOME */
 .container .content {
     margin: 5px 6%;
     display: flex;
-    height: auto;
-    box-sizing: border-box;
+    width: 100%;
+    height: 400px;
 }
 
 .container .content .danhmuc {
     border: 1px solid rgb(210, 210, 210);
     width: 25%;
-    min-height: 40%;
     background-color: white;
     position: relative;
 }
@@ -188,6 +184,9 @@ body {
     background-color: rgb(193, 181, 181);
     padding: 5px 0;
     box-sizing: border-box;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .container .content .danhmuc nav ul {
@@ -197,6 +196,9 @@ body {
 .content .danhmuc nav ul li {
     padding: 10px;
     border-bottom: 1px solid rgba(185, 185, 185, 0.572);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .container .content .danhmuc nav ul li:last-child {
@@ -218,6 +220,7 @@ body {
 
 .container .content .slide {
     display: flex;
+    width: 75%;
     padding: 0 5px;
     max-height: 400px;
     box-sizing: border-box;
@@ -226,7 +229,7 @@ body {
 .container .content .slide .slide-1 {
     /* max-height: 400px; */
     height: inherit;
-    max-width: 900px;
+    width: 50%;
 }
 
 .container .content .slide .slide-1 img {
@@ -236,104 +239,7 @@ body {
 
 .container .content .slide .slide-2 {
     max-height: 200px;
-    max-width: 330px;
-    padding: 0 0 5px 5px;
-}
-
-.container .content .slide .slide-2 img {
-    height: 198px;
-    width: 100%;
-}
-
-.container .banner {
-    margin: 5px 6%;
-    width: 87%;
-}
-
-.container .banner img {
-    width: 100%;
-}
-
-.container-menu .menu .menu-chinh li:hover {
-    background-color: #972b5c60;
-}
-
-/* END MENU */
-
-
-
-
-
-/* TRANG HOME */
-.container .content {
-    margin: 5px 6%;
-    display: flex;
-    height: auto;
-    box-sizing: border-box;
-}
-
-.container .content .danhmuc {
-    border: 1px solid rgb(210, 210, 210);
-    width: 25%;
-    min-height: 40%;
-    background-color: white;
-    position: relative;
-}
-
-.container .content .danhmuc h3 {
-    text-align: center;
-    background-color: rgb(193, 181, 181);
-    padding: 5px 0;
-    box-sizing: border-box;
-}
-
-.container .content .danhmuc nav ul {
-    padding: 5px;
-}
-
-.content .danhmuc nav ul li {
-    padding: 10px;
-    border-bottom: 1px solid rgba(185, 185, 185, 0.572);
-}
-
-.container .content .danhmuc nav ul li:last-child {
-    border-bottom: none;
-}
-
-.container .content .danhmuc nav ul li:hover a {
-    color: var(--tone-chudao);
-}
-
-.container .content .danhmuc nav ul li .fa-solid.fa-chevron-right {
-    font-size: 10px;
-}
-
-.container .content .danhmuc nav ul li a {
-    color: black;
-    padding-left: 10px;
-}
-
-.container .content .slide {
-    display: flex;
-    padding: 0 5px;
-    max-height: 400px;
-    box-sizing: border-box;
-}
-
-.container .content .slide .slide-1 {
-    /* max-height: 400px; */
-    height: inherit;
-    max-width: 900px;
-}
-
-.container .content .slide .slide-1 img {
-    height: 400px;
-    width: 100%;
-}
-
-.container .content .slide .slide-2 {
-    max-height: 200px;
-    max-width: 330px;
+    width: 33%;
     padding: 0 0 5px 5px;
 }
 
