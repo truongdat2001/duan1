@@ -168,11 +168,9 @@ body {
     /* padding: 10px 12%; */
     margin: 5px 6%;
     display: flex;
-    width: 100%;
+    /* width: 100%; */
     height: 400px;
 }
-
-
 
 .container .content .danhmuc {
     border: 1px solid rgb(210, 210, 210);
@@ -222,10 +220,9 @@ body {
 
 .container .content .slide {
     display: flex;
-    width: 75%;
-    padding: 0 5px;
+    width: 74%;
+    padding: 0 0 0 5px;
     max-height: 400px;
-    box-sizing: border-box;
 }
 
 .container .content .slide .slide-1 {
@@ -234,20 +231,26 @@ body {
     width: 50%;
 }
 
-.container .content .slide .slide-1 img {
+.container .content .slide .slide-1 a img {
     height: 400px;
     width: 100%;
+    display: block;
 }
 
 .container .content .slide .slide-2 {
     max-height: 200px;
-    width: 33%;
+    width: 50%;
     padding: 0 0 5px 5px;
 }
 
-.container .content .slide .slide-2 img {
+.container .content .slide .slide-2 a:nth-child(1) img {
+    margin-bottom: 5px;
+}
+
+.container .content .slide .slide-2 a img {
     height: 198px;
     width: 100%;
+    display: block;
 }
 
 .container .banner {
@@ -255,8 +258,9 @@ body {
     width: 87%;
 }
 
-.container .banner img {
+.container .banner a img {
     width: 100%;
+    display: block;
 }
 
 
