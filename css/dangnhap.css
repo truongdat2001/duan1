@@ -32,7 +32,8 @@ body{
 
 .header-tong-dangnhap .header-dangnhap .logo img {
     border-radius: 10px;
-    margin: 20px 0;
+    height: 100px;
+    margin: 5px 0;
 }
 
 .container-dangnhap .form-tong {

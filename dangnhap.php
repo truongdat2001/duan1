@@ -37,7 +37,7 @@
         <header class="header-tong-dangnhap">
             <div class="header-dangnhap">
                 <div class="logo">
-                    <a href="index.php"><img src="img/logo.jpg" alt="logo" style="width: 150px"></a>
+                    <a href="index.php"><img src="img/logo.png" alt="logo" style="width: 150px"></a>
                 </div>
             </div>
         </header>

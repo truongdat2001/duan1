@@ -85,7 +85,8 @@ function sendMail($matkhaumoi, $email)
 
         .header-tong-quenmk .header-quenmk .logo img {
             border-radius: 10px;
-            margin: 20px 0;
+            height: 100px;
+            margin: 5px 0;
         }
 
         .container-quenmk .form-tong {
@@ -158,7 +159,7 @@ function sendMail($matkhaumoi, $email)
         <header class="header-tong-quenmk">
             <div class="header-quenmk">
                 <div class="logo">
-                    <a href="index.php"><img src="img/logo.jpg" alt="logo" style="width: 150px"></a>
+                    <a href="index.php"><img src="img/logo.png" alt="logo" style="width: 150px"></a>
                 </div>
             </div>
         </header>

@@ -15,7 +15,8 @@
 
 .header-tong-dangky .header-dangky .logo img {
     border-radius: 10px;
-    margin: 20px 0;
+    height: 100px;
+    margin: 5px 0;
 }
 
 .container-dangky .form-tong {
@@ -63,3 +64,13 @@
 .container-dangky .form-tong .form .dangky:hover{
     background-color: green;
 }
+
+.container-dangky .form-tong .form .footer-form{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px;
+}
+
+.container-dangky .form-tong .form .footer-form a{
+    color: blue;
+} 

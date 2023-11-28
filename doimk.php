@@ -56,7 +56,8 @@ if (isset($_SESSION['user']) == false) {
 
         .header-tong-capnhatmk .header-capnhatmk .logo img {
             border-radius: 10px;
-            margin: 20px 0;
+            height: 100px;
+            margin: 5px 0;
         }
 
         .container-capnhatmk .form-tong {
@@ -131,7 +132,7 @@ if (isset($_SESSION['user']) == false) {
         <header class="header-tong-capnhatmk">
             <div class="header-capnhatmk">
                 <div class="logo">
-                    <a href="index.php"><img src="./img/logo.jpg" alt="logo" style="width: 150px"></a>
+                    <a href="index.php"><img src="./img/logo.png" alt="logo" style="width: 150px"></a>
                 </div>
             </div>
         </header>

@@ -36,7 +36,7 @@ if (isset($_POST['dangky']) && ($_POST['dangky'])) {
         <header class="header-tong-dangky">
             <div class="header-dangky">
                 <div class="logo">
-                    <a href="index.php"><img src="img/logo.jpg" alt="logo" style="width: 150px"></a>
+                    <a href="index.php"><img src="img/logo.png" alt="logo" style="width: 150px"></a>
                 </div>
             </div>
         </header>
@@ -76,6 +76,10 @@ if (isset($_POST['dangky']) && ($_POST['dangky'])) {
                 ?>
 
                 <input class="dangky" type="submit" name="dangky" value="Đăng ký">
+                
+                <div class="footer-form">
+                    <p>Bạn đã có tài khoản. <a href="dangnhap.php">Đăng nhập ngay</a></p>
+                </div>
             </form>
         </div>
     </div>
