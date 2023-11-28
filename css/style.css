@@ -9,6 +9,7 @@
 
 body {
     background-color: #F3F3F3;
+    overflow-x: hidden;
 }
 
 :root {
@@ -238,6 +239,7 @@ body {
 }
 
 .container .content .slide .slide-2 {
+
     max-height: 200px;
     width: 50%;
     padding: 0 0 5px 5px;
