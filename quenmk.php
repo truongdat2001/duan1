@@ -44,11 +44,11 @@ function sendMail($matkhaumoi, $email)
         $mail->Password = 'kxbm iqua tjpj upsa';   // SMTP password
         $mail->SMTPSecure = 'ssl';  // encryption TLS/SSL 
         $mail->Port = 465;  // port to connect to                
-        $mail->setFrom('dattruong792001@gmail.com', 'Trương Đạt');
+        $mail->setFrom('dattruong792001@gmail.com', 'ÉN DESIGN');
         $mail->addAddress($email);
         $mail->isHTML(true);  // Set email format to HTML
         $mail->Subject = 'Thiết lập lại mật khẩu của tài khoản khách hàng ';
-        $noidungthu = "<p>Anh/chị đã yêu cầu đổi mật khẩu tại XSHOP.</p>
+        $noidungthu = "<p>Anh/chị đã yêu cầu đổi mật khẩu tại ÉN DESIGN.</p>
         <p>Mật khẩu mới của Anh/chị là: {$matkhaumoi}</p>";
         $mail->Body = $noidungthu;
         $mail->send();
