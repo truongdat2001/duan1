@@ -40,9 +40,26 @@
         </article>
 
         <div class="slide">
-            <div class="slide-1">
-                <a href=""><img src="img/slider_1.png" alt=""></a>
+            <div id="slide" class="slide-1">
+                <a href=""><img id="slideImage" src="img/slider_1.png" alt="Slide 1"></a>
             </div>
+
+            <script>
+                var index = 1;
+                var imgs = ["img/slider_1.png", "img/slider_2.png", "img/slider_3.png", "img/slider_4.png"];
+
+                function changeImage() {
+                    document.getElementById('slideImage').src = imgs[index];
+                    index++;
+                    if (index === imgs.length) {
+                        index = 0;
+                    }
+                }
+
+                setInterval(function() {
+                    changeImage();
+                }, 2000);
+            </script>
 
             <div class="slide-2">
                 <a href=""><img src="img/near_slider_1.png" alt=""></a>
