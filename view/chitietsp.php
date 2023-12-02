@@ -17,12 +17,10 @@
                     <h4>Tình trạng: Còn hàng</h4>
                     <a href="">ĐẶC ĐIỂM NỔI BẬT</a>
                     <ul>
-                        <li>Bộ cảm biến CMOS kích thước APS-C 18.0 megapixel</li>
-                        <li>Tính năng xử lý hậu kỳ trên máy</li>
-                        <li>Màn hình LCD xoay lật đa dụng</li>
-                        <li>Quay Film Full HD 1920 x 1080.</li>
-                        <li>Tốc độ chụp 5 fps</li>
-                        <li>Kích thước bộ cảm biến hình ảnh 22,3 x 14,9mm</li>
+                        <li>Được may từ chất vải sợi S.Cafe bảo vệ môi trường, thân thiện với làn da người mặc</li>
+                        <li>Vải cafe còn mang sự mát mẻ,nhanh khô, khử mùi tốt và chống được tia cực tím, tia UV </li>
+                        <li>Form áo rộng rãi, phù hợp với mọi vóc dáng mang lại sự thoải mái cho người mặc</li>
+                        <li>Đa dạng về màu sắc dễ phối đồ, cho người mặc thoải mái lựa chọn</li>
                     </ul>
                 </div>
     

@@ -905,6 +905,13 @@ body {
     justify-content: space-around;
 }
 
+.container_ctsp .content_ctsp .sp_info .info {
+    width: 500px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 0 10px 10px 10px;
+}
+
 .container_ctsp .content_ctsp .sp_info .info h3 {
     font-size: 30px;
     color: red;
@@ -924,11 +931,12 @@ body {
 
 .container_ctsp .content_ctsp .sp_info .info ul {
     padding-top: 10px;
+    padding-left: 20px;
 }
 
 .container_ctsp .content_ctsp .sp_info .info ul li {
     list-style: square;
-    padding: 5px 0;
+    padding: 5px;
 }
 
 .container_ctsp .content_ctsp .sp_info .quyenloi {
@@ -953,11 +961,11 @@ body {
 
 .container_ctsp .content_ctsp .sp_info .quyenloi .group_quyenloi .box p {
     padding: 10px 0 0 15px;
-
 }
 
 .container_ctsp .content_ctsp .dathang {
     text-align: center;
+    margin-top: 10px;
 }
 
 .container_ctsp .content_ctsp .dathang .soluong {
