@@ -5,7 +5,7 @@ function hienthi_spgiohang($xoa)
     $tong = 0;
     $i = 0;
     $vnd = " VNĐ";
-    
+
     if ($xoa == 1) {
         $xoasp_th = '<th>Thao tác</th>';
         $xoasp_td = '<td><a href="index.php?act=xoagiohang&id-cart=' . $i . '"><input type="button" value="Xóa"></a></td>';
@@ -23,31 +23,38 @@ function hienthi_spgiohang($xoa)
             <th>Thành tiền</th>
             ' . $xoasp_th . '
         </tr>';
-        
 
+    $sanpham = array();
+    /*
+    $cart[1] là mã sản phẩm.
+    $cart[2] là đường dẫn đến hình ảnh sản phẩm.
+    $cart[3] là giá bán của sản phẩm.
+    $cart[4] là số lượng sản phẩm được mua.
+    */
     foreach ($_SESSION['donhang'] as $cart) {
-        $hinh = $hinh_path . $cart[2];
-        $thanhtien = $cart[3] * $cart[4];
-        $tong = $tong + $thanhtien;
-        
-        
-        $soTienDinhDang = number_format($cart[3], 0, ',', '.');
-        $dinhDangSoTien = number_format($thanhtien, 0, ',', '.');
-        if ($xoa == 1) {
-            $xoasp_th = '<th>Thao tác</th>';
-            $xoasp_td = '<td><a href="index.php?act=xoagiohang&id-cart=' . $i . '"><input type="button" value="Xóa"></a></td>';
-            $xoasp_td2 = '<td></td>';
+        if (array_key_exists($cart[1], $sanpham)) {
+            $sanpham[$cart[1]]['soluong'] += $cart[4];
+            $sanpham[$cart[1]]['thanhtien'] += $cart[3] * $cart[4];
         } else {
-            $xoasp_th = "";
-            $xoasp_td = "";
-            $xoasp_td2 = "";
+            $sanpham[$cart[1]] = array(
+                'hinh' => $hinh_path . $cart[2],
+                'dongia' => $cart[3],
+                'soluong' => $cart[4],
+                'thanhtien' => $cart[3] * $cart[4]
+            );
         }
+    }
+
+    foreach ($sanpham as $ten => $sp) {
+        $tong += $sp['thanhtien'];
+        $soTienDinhDang = number_format($sp['dongia'], 0, ',', '.');
+        $dinhDangSoTien = number_format($sp['thanhtien'], 0, ',', '.');
         echo '<tr>
-                <td>' . $cart[1] . '</td>
-                <td><img src="' . $hinh . '" width="100px" height="100px" alt=""></td>
+                <td>' . $ten . '</td>
+                <td><img src="' . $sp['hinh'] . '" width="100px" height="100px" alt=""></td>
                 <td>' . $soTienDinhDang . ' ' . $vnd . '</td>
-                <td>' . $cart[4] . '</td>
-                <td>' . $dinhDangSoTien . ' ' . $vnd . '</td>
+                <td>' . $sp['soluong'] . '</td>
+                <td id="thanhtien_' . $i . '">' . $dinhDangSoTien . ' ' . $vnd . '</td>
                 ' . $xoasp_td . '
             </tr>';
         $i += 1;
@@ -97,6 +104,7 @@ function billct($listbill)
         </tr>';
 }
 
+
 function tongcong()
 {
     $tong = 0;
@@ -107,7 +115,7 @@ function tongcong()
     return $tong;
 }
 
-function insert_bill($iduser,$hovaten, $diachi, $email, $phone, $pttt, $ngaydathang, $tongdonhang)
+function insert_bill($iduser, $hovaten, $diachi, $email, $phone, $pttt, $ngaydathang, $tongdonhang)
 {
     $sql = "insert into bill (iduser, bill_hovaten, bill_diachi, bill_email, bill_phone, bill_pttt, ngaydathang, tongcong) values ('$iduser','$hovaten','$diachi','$email','$phone','$pttt','$ngaydathang','$tongdonhang')";
     return pdo_execute_return_lastInsertId($sql);
@@ -140,17 +148,18 @@ function loadall_giohang_soluong($idbill)
     return sizeof($bill);
 }
 
-function loadall_bill($kyw="",$iduser)
+function loadall_bill($kyw = "", $iduser)
 {
     $sql = "select * from bill where 1";
-    if($iduser>0) $sql.=" and iduser=" . $iduser;
-    if($kyw!="") $sql.=" and id like '%" . $kyw."%'";
-    $sql.=" order by id desc";
+    if ($iduser > 0) $sql .= " and iduser=" . $iduser;
+    if ($kyw != "") $sql .= " and id like '%" . $kyw . "%'";
+    $sql .= " order by id desc";
     $listbill = pdo_query($sql);
     return $listbill;
 }
 
-function get_trangthaidonhang($n){
+function get_trangthaidonhang($n)
+{
     switch ($n) {
         case '0':
             $tt = "Đơn hàng mới.";
@@ -167,7 +176,7 @@ function get_trangthaidonhang($n){
         case '3':
             $tt = "Hoàn tất";
             break;
-        
+
         default:
             $tt = "Đơn hàng mới";
             break;
@@ -175,11 +184,11 @@ function get_trangthaidonhang($n){
     return $tt;
 }
 
-function loadall_thongke() {
+function loadall_thongke()
+{
     $sql = "select danhmuc.id_dm as iddm ,danhmuc.ten_dm as tendm, count(sanpham.id_sp) as countsp, min(sanpham.don_gia) as mingia, max(sanpham.don_gia) as maxgia, avg(sanpham.don_gia) as giatrungbinh";
-    $sql.=" from sanpham left join danhmuc on danhmuc.id_dm=sanpham.id_dm";
-    $sql.=" group by danhmuc.id_dm order by danhmuc.id_dm desc";
+    $sql .= " from sanpham left join danhmuc on danhmuc.id_dm=sanpham.id_dm";
+    $sql .= " group by danhmuc.id_dm order by danhmuc.id_dm desc";
     $listthongke = pdo_query($sql);
     return $listthongke;
 }
-

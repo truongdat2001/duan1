@@ -1,6 +1,6 @@
 <div class="container-sanpham">
     <div class="ten-danh-muc">
-        <h3><?=$namedm?></h3>
+        <h3><?= $namedm ?></h3>
     </div>
 
     <div class="sap-xep">
