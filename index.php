@@ -106,12 +106,12 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                     $tongcong = tongcong();
 
                     /*
-                    You need to ensure that a valid user id is always passed to the insert_giohang function. 
-                    If a user is not logged in (i.e., $_SESSION['user']['id'] is not set), 
-                    you should not allow them to add items to the cart. hahah
+                    Cần đảm bảo rằng id người dùng hợp lệ luôn được chuyển đến hàm Insert_giohang.
+                    Nếu người dùng chưa đăng nhập (tức là $_SESSION['user']['id'] chưa được đặt), 
+                    Không nên cho phép họ thêm mặt hàng vào giỏ hàng.
                     */
                     if (!isset($_SESSION['user']) || !isset($_SESSION['user']['id'])) {
-                        // Redirect to login page or show an error message
+                        // Chuyển hướng đến trang đăng nhập
                         header('Location: dangnhap.php');
                         exit();
                     }
