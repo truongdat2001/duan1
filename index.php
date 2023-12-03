@@ -1,4 +1,5 @@
 <?php
+// Kết nối các tệp tin và thư viện
 include "DAO/pdo.php";
 include "DAO/sanpham.php";
 include "DAO/danhmuc.php";
@@ -7,13 +8,17 @@ include "view/dautrang.php";
 // include "view/menu.php";
 include "bientong.php";
 
+//Kiểm tra xem biến phiên 'donhang' đã được khởi tạo chưa. Nếu không, khởi tạo nó là một mảng trống.
 if (!isset($_SESSION['donhang'])) {
     $_SESSION['donhang'] = [];
 }
 
+//Tải danh sách sản phẩm mới nhất, danh sách danh mục, và danh sách 8 sản phẩm hàng đầu cho trang chủ.
 $sp_new = loadall_sanpham_home();
 $ds_dm = loadall_danhmuc();
 $ds_top8 = loadall_sanpham_top8();
+
+//Kiểm tra xem có hành động (act) được yêu cầu không
 if (isset($_GET['act']) && ($_GET['act'] != "")) {
     $act = $_GET['act'];
     switch ($act) {
@@ -22,6 +27,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             break;
 
         case 'sanpham_ct':
+            //Kiểm tra xem biến id_sp đã được truyền qua URL 
             if (isset($_GET['id_sp']) && ($_GET['id_sp'] > 0)) {
                 $onesp = loadone_sanpham($_GET['id_sp']);
                 include "view/chitietsp.php";
@@ -31,6 +37,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             break;
 
         case 'timsp':
+            //Kiểm tra xem biến kyw đã được gửi đi trong yêu cầu POST và có giá trị khác rỗng không
             if (isset($_POST['kyw']) && ($_POST['kyw'] != "")) {
                 $kyw = $_POST['kyw'];
                 $tukhoa = "Từ bạn tìm là: ";
@@ -69,14 +76,14 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $so_luong = 1;
                 $thanhtien = $so_luong * $don_gia;
                 $spadd = [$id_sp, $ten_sp, $hinh, $don_gia, $so_luong, $thanhtien];
-                array_push($_SESSION['donhang'], $spadd);
+                array_push($_SESSION['donhang'], $spadd); //được sử dụng để thêm một phần tử mới vào cuối mảng 
             }
             include "giohang/giohang.php";
             break;
 
         case 'xoagiohang':
             if (isset($_GET['id-cart'])) {
-                array_splice($_SESSION['donhang'], $_GET['id-cart'], 1);
+                array_splice($_SESSION['donhang'], $_GET['id-cart'], 1); // được sử dụng để loại bỏ một phần tử từ mảng 
             } else {
                 $_SESSION['donhang'] = [];
             }
