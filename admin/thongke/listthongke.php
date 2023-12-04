@@ -10,25 +10,27 @@
                     <th>MÃ DANH MỤC</th>
                     <th>TÊN DANH MỤC</th>
                     <th>SỐ LƯỢNG</th>
-                    <th>GIÁ CAO NHẤT</th>
                     <th>GIÁ THẤP NHẤT</th>
+                    <th>GIÁ CAO NHẤT</th>
                     <th>GIÁ TRUNG BÌNH</th>
                 </tr>
+
                 <?php
                 foreach ($listthongke as $thongke) {
                     extract($thongke);
                     echo '<tr>
                                 <td>' . $iddm . '</td>
                                 <td>' . $tendm . '</td>
-                                <td>' . $countsp . '</td>
-                                <td>' . $mingia . ' VNĐ</td>
-                                <td>' . $maxgia . ' VNĐ</td>
-                                <td>' . $giatrungbinh . ' VNĐ</td>
+                                <td>' . number_format($countsp, 0, ',', '.') . '</td>
+                                <td>' . number_format($mingia, 0, ',', '.') . ' VNĐ</td>
+                                <td>' . number_format($maxgia, 0, ',', '.') . ' VNĐ</td>
+                                <td>' . number_format($giatrungbinh, 0, ',', '.') . ' VNĐ</td>
                             </tr>';
                 }
                 ?>
 
             </table>
+             
         </div>
         <div class="group-submit">
             <a href="index.php?act=bieudo"><input type="button" value="Xem biểu đồ"></a>

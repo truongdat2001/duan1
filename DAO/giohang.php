@@ -192,3 +192,4 @@ function loadall_thongke()
     $listthongke = pdo_query($sql);
     return $listthongke;
 }
+

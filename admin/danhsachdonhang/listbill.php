@@ -22,6 +22,13 @@
                     <th></th>
                 </tr>
                 <?php
+                function TongDoanhThu($listbill) {
+                    $tongDoanhThu = 0;
+                    foreach ($listbill as $bill) {
+                        $tongDoanhThu += $bill['tongcong'];
+                    }
+                    return $tongDoanhThu;
+                }
                 foreach ($listbill as $bill) {
                     extract($bill);
                     $soluong = loadall_giohang_soluong($bill['id']);
@@ -30,20 +37,28 @@
                                 <br> ' . $bill['bill_email'] . ' 
                                 <br> ' . $bill['bill_phone'] . ' 
                                 <br> ' . $bill['bill_diachi'] . ' '; 
+                    
                     echo '<tr>
                                 <td><input type="checkbox" name="" id=""></td>
                                 <td>VN-' . $bill['id'] . '</td>
                                 <td>' . $khachhang . '</td>
                                 <td>'.$soluong.'</td>
-                                <td><strong>'.$tongcong.'</strong> VND</td>
+                                <td><strong>'.number_format($tongcong, 0, ',', '.').'</strong> VND</td>
                                 <td>'.$bill['ngaydathang'].'</td>
                                 <td>'.$ttdn.'</td>
                                 <td><a href=""><input type="button" value="Sửa"></a> <a href=""><input type="button" value="Xóa"></a></td>
                             </tr>';
                 }
                 ?>
-
+                
             </table>
+                <br>
+            <Table>
+                <tr>
+                    <td colspan="2">Doanh Thu</td>
+                    <td><strong><?php echo number_format(TongDoanhThu($listbill), 0, ',', '.'); ?></strong> VND</td>
+                </tr>
+            </Table>
             <?php
             if (isset($thongbao)) {
                 echo $thongbao;
