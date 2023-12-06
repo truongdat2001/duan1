@@ -20,8 +20,12 @@ if (isset($_SESSION['user'])) {
                 case 'add_dm':
                     if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
                         $tenloai = $_POST['tenloai'];
-                        insert_danhmuc($tenloai);
-                        $thongbao = "Thêm thành công";
+                        if ($tenloai != "") {
+                            insert_danhmuc($tenloai);
+                            $thongbao = "Thêm thành công";
+                        } else {
+                            $thongbao = "Thêm thất bại.";
+                        }
                     }
                     include "danhmuc/add_dm.php";
                     break;
@@ -52,8 +56,12 @@ if (isset($_SESSION['user'])) {
                     if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
                         $tenloai = $_POST['tenloai'];
                         $id_dm = $_POST['id_dm'];
-                        update_danhmuc($tenloai, $id_dm);
-                        $thongbao = "Cập nhật thành công";
+                        if ($tenloai != "") {
+                            update_danhmuc($tenloai, $id_dm);
+                            $thongbao = "Cập nhật thành công";
+                        } else {
+                            $thongbao = "Cập nhật thất bại";
+                        }
                     }
                     $list_dm = loadall_danhmuc();
                     include "danhmuc/list_dm.php";
@@ -74,8 +82,12 @@ if (isset($_SESSION['user'])) {
                             // echo "Sorry, there was an error uploading your file.";
                         }
                         $mota = $_POST['mota'];
-                        insert_sanpham($tensp, $dongia, $hinh, $mota, $id_dm);
-                        $thongbao = "Thêm thành công";
+                        if (($tensp && $dongia && $hinh) != "") {
+                            insert_sanpham($tensp, $dongia, $hinh, $mota, $id_dm);
+                            $thongbao = "Thêm thành công";
+                        } else {
+                            $thongbao = "Thêm thất bại";
+                        }
                     }
                     $list_dm = loadall_danhmuc();
                     include "sanpham/add_sp.php";
@@ -126,8 +138,12 @@ if (isset($_SESSION['user'])) {
                             // echo "Sorry, there was an error uploading your file.";
                         }
                         $mota = $_POST['mota'];
-                        update_sanpham($id_sp, $tensp, $dongia, $hinh, $mota, $id_dm);
-                        $thongbao = "Cập nhật thành công";
+                        if (($tensp && $dongia && $hinh) != "") {
+                            update_sanpham($id_sp, $tensp, $dongia, $hinh, $mota, $id_dm);
+                            $thongbao = "Cập nhật thành công";
+                        } else {
+                            $thongbao = "Thêm thất bại";
+                        }
                     }
                     $list_dm = loadall_danhmuc();
                     $list_sp = loadall_sanpham("", 0);
@@ -190,11 +206,9 @@ if (isset($_SESSION['user'])) {
             include "home.php";
         }
         include "footer.php";
-    } else{
+    } else {
         header('location: ../index.php');
-    }    
-    
+    }
 } else {
     header('location: ../index.php');
-} 
-
+}

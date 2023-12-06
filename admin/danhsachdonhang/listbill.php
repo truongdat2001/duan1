@@ -9,10 +9,14 @@
     </form>
 
     <div class="form">
+        <?php
+        if (isset($thongbao)) {
+            echo "<div style='font-size: 25px; color: red'>$thongbao</div>";
+        }
+        ?>
         <div class="form-list">
             <table>
                 <tr>
-                    <th></th>
                     <th>MÃ ĐƠN HÀNG</th>
                     <th>KHÁCH HÀNG</th>
                     <th>SỐ LƯỢNG HÀNG</th>
@@ -22,7 +26,8 @@
                     <th></th>
                 </tr>
                 <?php
-                function TongDoanhThu($listbill) {
+                function TongDoanhThu($listbill)
+                {
                     $tongDoanhThu = 0;
                     foreach ($listbill as $bill) {
                         $tongDoanhThu += $bill['tongcong'];
@@ -36,40 +41,28 @@
                     $khachhang = $bill['bill_hovaten'] . '
                                 <br> ' . $bill['bill_email'] . ' 
                                 <br> ' . $bill['bill_phone'] . ' 
-                                <br> ' . $bill['bill_diachi'] . ' '; 
-                    
+                                <br> ' . $bill['bill_diachi'] . ' ';
+
                     echo '<tr>
-                                <td><input type="checkbox" name="" id=""></td>
                                 <td>VN-' . $bill['id'] . '</td>
                                 <td>' . $khachhang . '</td>
-                                <td>'.$soluong.'</td>
-                                <td><strong>'.number_format($tongcong, 0, ',', '.').'</strong> VND</td>
-                                <td>'.$bill['ngaydathang'].'</td>
-                                <td>'.$ttdn.'</td>
+                                <td>' . $soluong . '</td>
+                                <td><strong>' . number_format($tongcong, 0, ',', '.') . '</strong> VND</td>
+                                <td>' . $bill['ngaydathang'] . '</td>
+                                <td>' . $ttdn . '</td>
                                 <td><a href=""><input type="button" value="Sửa"></a> <a href=""><input type="button" value="Xóa"></a></td>
                             </tr>';
                 }
                 ?>
-                
+
             </table>
-                <br>
+            <br>
             <Table>
                 <tr>
                     <td colspan="2">Doanh Thu</td>
                     <td><strong><?php echo number_format(TongDoanhThu($listbill), 0, ',', '.'); ?></strong> VND</td>
                 </tr>
             </Table>
-            <?php
-            if (isset($thongbao)) {
-                echo $thongbao;
-            }
-            ?>
-        </div>
-        <div class="group-submit">
-            <input type="button" value="Chọn tất cả">
-            <input type="button" value="Bỏ chọn tất cả">
-            <input type="button" value="Xóa các mục đã chọn">
-            <a href="index.php?act=add_sp"><input type="button" value="Nhập thêm"></a>
         </div>
     </div>
 </div>

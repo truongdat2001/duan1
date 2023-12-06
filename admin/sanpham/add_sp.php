@@ -3,6 +3,11 @@
         <h1>THÊM MỚI SẢN PHẨM</h1>
     </div>
     <div class="form">
+        <?php
+        if (isset($thongbao)) {
+            echo "<div style='font-size: 25px; color: red'>$thongbao</div>";
+        }
+        ?>
         <form action="index.php?act=add_sp" method="post" enctype="multipart/form-data">
             <div class="group">
                 <label for="masp">Danh mục:</label> <br>
@@ -41,11 +46,6 @@
                 <input type="reset" value="Reset">
                 <a href="index.php?act=list_sp"><input type="button" value="Danh sách"></a>
             </div>
-            <?php
-            if (isset($thongbao) && ($thongbao != "")) {
-                echo $thongbao;
-            }
-            ?>
         </form>
     </div>
 </div>

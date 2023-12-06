@@ -1,6 +1,6 @@
 <div class="content">
     <div class="titel">
-        <h1>DANH SÁCH DANH MỤC</h1>
+        <h1>DANH SÁCH SẢN PHẨM</h1>
     </div>
 
     <form action="index.php?act=list_sp" method="post">
@@ -18,11 +18,15 @@
     </form>
 
     <div class="form">
+        <?php
+        if (isset($thongbao)) {
+            echo "<div style='font-size: 25px; color: red'>$thongbao</div>";
+        }
+        ?>
         <div class="form-list">
 
             <table>
                 <tr>
-                    <th></th>
                     <th>MÃ LOẠI</th>
                     <th>TÊN SẢN PHẨM</th>
                     <th>ĐƠN GIÁ</th>
@@ -45,7 +49,6 @@
                     }
 
                     echo '<tr>
-                        <td><input type="checkbox" name="" id=""></td>
                         <td>' . $id_sp . '</td>
                         <td>' . $ten_sp . '</td>
                         <td>' . $don_gia . '</td>
@@ -56,16 +59,8 @@
                 }
                 ?>
             </table>
-            <?php
-            if (isset($thongbao)) {
-                echo $thongbao;
-            }
-            ?>
         </div>
         <div class="group-submit">
-            <input type="button" value="Chọn tất cả">
-            <input type="button" value="Bỏ chọn tất cả">
-            <input type="button" value="Xóa các mục đã chọn">
             <a href="index.php?act=add_sp"><input type="button" value="Nhập thêm"></a>
         </div>
     </div>
