@@ -11,8 +11,12 @@ if (isset($_POST['dangky']) && ($_POST['dangky'])) {
     $nhaplai_password = $_POST['nhaplai_password'];
     $email = $_POST['email'];
     if (($_POST['password']) == ($_POST['nhaplai_password'])) {
-        insert_taikhoan($hovaten, $username, $password, $email);
-        header('location: dangnhap.php');
+        if ($email == check_email($email)) {
+            insert_taikhoan($hovaten, $username, $password, $email);
+            header('location: dangnhap.php');
+        } else {
+            $thongbao = "Email đã tồn tồn tại trên hệ thống.";
+        }
     } else {
         $checkmk = false;
     }

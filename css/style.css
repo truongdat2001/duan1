@@ -116,12 +116,14 @@ body {
 
 .header-tong .header .taikhoan .login-user li:hover ul.menu-con {
     display: block;
+    z-index: 1;
 }
 
 .header-tong .header .taikhoan .login-user ul.menu-con a {
     padding: 8px 15px;
     text-align: left;
     border-bottom: 1px solid #777777;
+    z-index: 1;
 }
 
 .header-tong .header .taikhoan .login-user ul.menu-con a:hover {
