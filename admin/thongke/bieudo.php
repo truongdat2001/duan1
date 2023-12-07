@@ -11,20 +11,28 @@
         var data = google.visualization.arrayToDataTable([
             ['Danh mục', 'Số lượng sản phẩm', 'Tổng giá trị'],
             <?php
-                $tongdm = count($listthongke);
-                foreach ($listthongke as $thongke) {
-                    extract($thongke);
-                    echo " ['" . $thongke['tendm'] . "', " . $thongke['countsp'] . ", " . $thongke['giatrungbinh'] . "],";
-                }
+            $tongdm = count($listthongke);
+            foreach ($listthongke as $thongke) {
+                extract($thongke);
+                echo " ['" . $thongke['tendm'] . "', " . $thongke['countsp'] . ", " . ($thongke['countsp'] * $thongke['giatrungbinh']) . "],";
+            }
             ?>
         ]);
 
         // Set Options
         var options = {
             title: 'Thống kê sản phẩm theo danh mục',
-            hAxis: {title: 'Số lượng sản phẩm'},
-            vAxis: {title: 'Tổng giá trị'},
-            bubble: {textStyle: {fontSize: 11}}
+            hAxis: {
+                title: 'Số lượng sản phẩm'
+            },
+            vAxis: {
+                title: 'Tổng giá trị'
+            },
+            bubble: {
+                textStyle: {
+                    fontSize: 11
+                }
+            }
         };
 
         // Draw

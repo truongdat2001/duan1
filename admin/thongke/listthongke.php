@@ -12,7 +12,7 @@
                     <th>SỐ LƯỢNG</th>
                     <th>GIÁ THẤP NHẤT</th>
                     <th>GIÁ CAO NHẤT</th>
-                    <th>GIÁ TRUNG BÌNH</th>
+
                 </tr>
 
                 <?php
@@ -24,13 +24,13 @@
                                 <td>' . number_format($countsp, 0, ',', '.') . '</td>
                                 <td>' . number_format($mingia, 0, ',', '.') . ' VNĐ</td>
                                 <td>' . number_format($maxgia, 0, ',', '.') . ' VNĐ</td>
-                                <td>' . number_format($giatrungbinh, 0, ',', '.') . ' VNĐ</td>
+                                
                             </tr>';
                 }
                 ?>
 
             </table>
-             
+
         </div>
         <div class="group-submit">
             <a href="index.php?act=bieudo"><input type="button" value="Xem biểu đồ"></a>

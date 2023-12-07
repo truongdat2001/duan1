@@ -186,10 +186,9 @@ function get_trangthaidonhang($n)
 
 function loadall_thongke()
 {
-    $sql = "select danhmuc.id_dm as iddm ,danhmuc.ten_dm as tendm, count(sanpham.id_sp) as countsp, min(sanpham.don_gia) as mingia, max(sanpham.don_gia) as maxgia, avg(sanpham.don_gia) as giatrungbinh";
+    $sql = "select danhmuc.id_dm as iddm ,danhmuc.ten_dm as tendm, count(sanpham.id_sp) as countsp, min(sanpham.don_gia) as mingia, max(sanpham.don_gia) as maxgia, sum(sanpham.don_gia) as giatrungbinh";
     $sql .= " from sanpham left join danhmuc on danhmuc.id_dm=sanpham.id_dm";
     $sql .= " group by danhmuc.id_dm order by danhmuc.id_dm desc";
     $listthongke = pdo_query($sql);
     return $listthongke;
 }
-
