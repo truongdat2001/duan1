@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 22, 2023 lúc 05:45 AM
+-- Thời gian đã tạo: Th12 07, 2023 lúc 01:53 AM
 -- Phiên bản máy phục vụ: 10.4.28-MariaDB
 -- Phiên bản PHP: 8.2.4
 
@@ -144,7 +144,37 @@ INSERT INTO `sanpham` (`id_sp`, `ten_sp`, `don_gia`, `hinh`, `mo_ta`, `so_luot_x
 (21, 'Áo Thun Supima Cotton Cổ Tròn ', 293000, 'vngoods_31_444527.png', '  ', 0, 2),
 (22, 'Áo Thun Mini Ngắn Tay', 293000, 'vngoods_47_455762.png', '  ', 0, 2),
 (23, 'Áo Thun Vải Gân Kẻ Sọc Cổ Cao Dài Tay', 391000, 'vngoods_01_462912.png', ' ', 0, 2),
-(24, 'Đầm bầu dự tiệc chất tapta cao cấp Tata Dress', 595000, 'tata__9__7759fc98184e446a8881c5ab1d03e286_large.png', ' ', 0, 8);
+(24, 'Đầm bầu dự tiệc chất tapta cao cấp Tata Dress', 595000, 'tata__9__7759fc98184e446a8881c5ab1d03e286_large.png', ' ', 0, 8),
+(26, 'Áo Khoác PARKA TRẦN BÔNG SLLKEKC 1382', 2150000, 'Áo Khoác PARKA TRẦN BÔNG SLLKEKC 1382.png', '', 0, 9),
+(27, 'Áo Phao Lông Vũ Typo Pattern 1623', 3000000, 'Áo Phao Lông Vũ Typo Pattern 1623.png', '', 0, 9),
+(28, 'Áo Phao Lông Vũ Phản Quang 1393', 2000000, 'Áo Phao Lông Vũ Phản Quang 1393.png', '', 0, 9),
+(29, 'Áo Phao Lông Vũ CITY OF ANGEL 1309', 800000, 'Áo Phao Lông Vũ CITY OF ANGEL 1309.png', ' ', 0, 9),
+(30, 'Áo Phao Bomber Super Jacket 1283', 4000000, 'Áo Phao Bomber Super Jacket 1283.png', '', 0, 9),
+(31, 'Áo Phao Parka Trendsetter 1321', 1500000, 'Áo Phao Parka Trendsetter 1321.png', '', 0, 9),
+(32, 'LISA DRESS - ĐẦM DẠ HỘI ĐUÔI CÁ', 6500000, 'LISA DRESS - ĐẦM DẠ HỘI ĐUÔI CÁ.png', '', 0, 10),
+(33, 'Váy Chữ A Nữ Cúp Ngực Cổ Yếm', 5000000, 'Váy Chữ A Nữ Cúp Ngực Cổ Yếm.png', '', 0, 10),
+(34, 'Váy Chữ A Nữ Jeans Trễ Vai', 9000000, 'Váy Chữ A Nữ Jeans Trễ Vai.png', '', 0, 10),
+(35, 'Váy Chữ A Nữ Thiết Kế 2 Dây Dáng Dài', 9000000, 'Váy Chữ A Nữ Thiết Kế 2 Dây Dáng Dài.png', '', 0, 10),
+(36, 'Váy Chữ A Nữ Hoa Hồng Dáng Xòe', 4500000, 'Váy Chữ A Nữ Hoa Hồng Dáng Xòe.png', '', 0, 10),
+(37, 'Váy 2 Dây Nữ Thắt Nơ Ngực', 3000000, 'Váy 2 Dây Nữ Thắt Nơ Ngực.png', '', 0, 10),
+(38, 'Chân váy dáng xòe công sở màu hồng', 400000, 'Chân váy dáng xòe công sở màu hồng.png', '', 0, 11),
+(39, 'Chân váy midi kẻ sọc tùng đắp chéo', 6000000, 'Chân váy midi kẻ sọc tùng đắp chéo.png', '', 0, 11),
+(40, 'Chân váy jeans dài dáng chữ A màu xanh', 500000, 'Chân váy jeans dài dáng chữ A màu xanh.png', '', 0, 11),
+(41, 'Chân váy công sở màu kem xếp ly', 1480000, 'Chân váy công sở màu kem xếp ly.png', '', 0, 11),
+(42, 'Chân váy suông dáng dài hoạ tiết caro', 1500000, 'Chân váy suông dáng dài hoạ tiết caro.png', '', 0, 11),
+(43, 'Chân váy dáng xòe chữ a xếp ly đính nút', 300000, 'Chân váy dáng xòe chữ a xếp ly đính nút.png', '', 0, 11),
+(44, 'Chân váy chữ a dáng ngắn phối hai túi', 310000, 'Chân váy chữ a dáng ngắn phối hai túi.png', '', 0, 11),
+(45, 'Chân váy bút chì công sở màu đen', 3400000, 'Chân váy bút chì công sở màu đen.png', '', 0, 11),
+(46, 'Quần Kaki Nữ Ống Đứng Ủi Ly Trơn Form Straight - 1', 540000, 'Quần Kaki Nữ Ống Đứng Ủi Ly Trơn Form Straight - 10S23PCAW002.png', '', 0, 12),
+(47, 'Quần Kaki Nữ Xếp Ly Gân Form Straight Crop - 10F22', 4000000, 'Quần Kaki Nữ Xếp Ly Gân Form Straight Crop - 10F22PCAW004.png', '', 0, 12),
+(48, 'Quần Kaki Nữ Gập Lai Túi Đắp Form Straight - 10F22', 4000000, 'Quần Kaki Nữ Gập Lai Túi Đắp Form Straight - 10F22PCAW001.png', '', 0, 12),
+(49, 'Quần Kaki Nữ Trơn Xếp Ly Đôi Form Wide Leg - 10S23', 4000000, 'Quần Kaki Nữ Trơn Xếp Ly Đôi Form Wide Leg - 10S23PCAW016.png', '', 0, 12),
+(50, 'Quần Kaki Ống Suông Nữ Lưng Kiểu', 4800000, 'Quần Kaki Ống Suông Nữ Lưng Kiểu.png', '', 0, 12),
+(51, 'Áo Thun Oversize Nam Cổ Tròn In Hình', 4000000, 'Áo Thun Oversize Nam Cổ Tròn In Hình.png', '', 0, 1),
+(52, 'Áo Thun Slimfit Nữ In Chữ Nổi Coming Soon 2300201', 150000, 'Áo Thun Slimfit Nữ In Chữ Nổi Coming Soon 2300201.png', '', 0, 2),
+(53, 'Váy 2 Dây Nữ Xếp Ly Hoạ Tiết', 280000, 'Váy 2 Dây Nữ Xếp Ly Hoạ Tiết.png', '', 0, 10),
+(54, 'Áo Phao Nam Có Mũ Siêu Nhẹ', 480000, 'Áo Phao Nam Có Mũ Siêu Nhẹ.png', '', 0, 9),
+(55, 'Áo thun nữ anh đạt', 500000, 'download.jpg', '', 0, 2);
 
 -- --------------------------------------------------------
 
@@ -252,7 +282,7 @@ ALTER TABLE `giohang`
 -- AUTO_INCREMENT cho bảng `sanpham`
 --
 ALTER TABLE `sanpham`
-  MODIFY `id_sp` int(11) NOT NULL AUTO_INCREMENT COMMENT 'mã sản phẩm', AUTO_INCREMENT=25;
+  MODIFY `id_sp` int(11) NOT NULL AUTO_INCREMENT COMMENT 'mã sản phẩm', AUTO_INCREMENT=56;
 
 --
 -- AUTO_INCREMENT cho bảng `users`
